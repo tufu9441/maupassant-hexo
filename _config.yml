@@ -1,12 +1,22 @@
-fancybox: true ## If you want to use fancybox please set the value to true
-duoshuo: ## Your duoshuo_shortname, e.g. haomwei
-disqus: ## Your disqus_shortname, e.g. haomwei
-google_search: true ## Use Google search, true/false
-baidu_search: ## Use Baidu search, true/false
-swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
-tinysou: ## Your tinysou_key, e.g. 4ac092ad8d749fdc6293
-google_analytics: ## Your Google Analytics tracking id, e.g. UA-42425684-2
-baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
+## If you want to use fancybox please set the value to true
+fancybox: true
+## Your duoshuo_shortname, e.g. haomwei
+duoshuo: AbandonZHANG
+## Your disqus_shortname, e.g. haomwei
+disqus:
+## Use Google search, true/false
+google_search:
+## Use Baidu search, true/false
+baidu_search:
+## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
+swiftype:
+## Your tinysou_key, e.g. 4ac092ad8d749fdc6293
+tinysou:
+## Your Google Analytics tracking id, e.g. UA-42425684-2
+google_analytics:
+## Your Baidu Analytics tracking id, e.g. 8006843039519956000
+baidu_analytics:
+# 菜单栏
 menu:
   - page: home
     directory: /
@@ -20,10 +30,14 @@ menu:
   - page: rss
     directory: atom.xml
     icon: icon-rss
+# 侧边栏
+## 是否显示分类
+category: false
+## 是否显示标签
+tag: true
+## 是否显示最近评论
+recent: true
+## 友情链接
 links:
-  - title: site-name1
-    url: http://www.example1.com/
-  - title: site-name2
-    url: http://www.example2.com/
-  - title: site-name3
-    url: http://www.example3.com/
+  - title: Maupassant-Hexo主题
+    url: https://github.com/tufu9441/maupassant-hexo

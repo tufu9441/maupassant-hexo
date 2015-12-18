@@ -216,14 +216,17 @@ a:focus{
 		color: #444;
 		padding-top: 20px;
 		text-align: justify;
-		h2, h3 {
+		h2 {
+			border-bottom: 1px solid #eee;
+            margin: 1.4em 0 1.1em;
+		}
+		h3 {
 			margin: 1.4em 0 1.1em;
 		}
 		pre code {
 			padding: 0 2em;
 		}
 		p {
-			margin: 0 0 1.234em;
 			code {
 				display: inline;
 				margin: 0 5px;
@@ -261,13 +264,8 @@ a:focus{
 			display: block;
 		}
 		ul, ol {
-			overflow: auto;
-			padding: .5em 2.4em;
 			border-radius: 3px;
 			margin: 1em 0;
-			li {
-				text-indent: .5em;
-			}
 			ul {
 				margin: 0;
 			}
@@ -279,9 +277,6 @@ a:focus{
 					text-decoration: underline;
 				}
 			}
-		}
-		table {
-			margin: 0;
 		}
 	}
 	.tags {
@@ -426,7 +421,6 @@ blockquote:before,.stressed-quote:before {
     position: absolute;
 }
 strong,b,em{
-	padding: 1px 2px;
 	font-weight: bold;
 }
 pre{
@@ -738,6 +732,8 @@ figure.highlight {
     overflow:      hidden;
 
     table {
+        margin:     0;      // prevent from global table margin
+        padding:    5px;
         display:    block;
         width:      100%;
         overflow-y: hidden;
@@ -1353,20 +1349,21 @@ i {
   }
 }
 
-/* table*/
+/* global table*/
 table {
-    width:           100%;
-    background:      transparent;
-    border-collapse: collapse;
-    border-spacing:  0;
-    text-align:      left;
+	margin:             auto;
+    min-width:          200px;
+    background:         transparent;
+    border-collapse:    collapse;
+    border-spacing:     0;
+    text-align:         left;
     th {
         font-weight:    bold;
-        padding-bottom: 0.5em;
+        padding:        0.5em;
         border-bottom:  2px solid lighten(#dce4f1, 2);
     }
     td {
-        border-bottom: 1px solid lighten(#dce4f1, 2);
-        padding:       1rem 0;
+        padding:        0.5em;
+        border-bottom:  1px solid lighten(#dce4f1, 2);
     }
 }

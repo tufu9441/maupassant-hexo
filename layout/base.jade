@@ -65,16 +65,19 @@ html(lang='#{config.language}')
           .widget
             form
               input#ts-search-input(class='ts-search-input' placeholder='Search' type='text')
-        .widget
-          .widget-title= __('categories')
-          != list_categories({show_count: false})
-        .widget
-          .widget-title= __('tags')
-          .tagcloud
-            != tagcloud({min_font: 15, max_font: 15, amount: 100, orderby: 'count'})
-        .widget
-          .widget-title= __('recent')
-          != list_posts({amount: 10})
+        if theme.category
+          .widget
+            .widget-title= __('categories')
+            != list_categories({show_count: false})
+        if theme.tag
+          .widget
+            .widget-title= __('tags')
+            .tagcloud
+              != tagcloud({min_font: 15, max_font: 15, amount: 100, orderby: 'count', color: true, start_color:   '#000000', end_color: '#FF6347'})
+        if theme.recent
+          .widget
+            .widget-title= __('recent')
+            != list_posts({amount: 10})
         if theme.duoshuo
           .widget
             .comments-title= __('recent_comments')
