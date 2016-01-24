@@ -734,74 +734,62 @@ div {
 
 /* syntax highlight*/
 figure.highlight {
-    background:     #f7f8f8;
-    margin:         10px 0;
-    line-height:    1.2em;
-    color:          #333;
-    padding-top:    15px;
-    overflow:       hidden;
+  background: #f7f8f8;
+  margin: 10px 0;
+  line-height: 1.2em;
+  color: #333;
+  overflow: hidden; 
+}
 
-    table {
-        display:    block;
-        width:      100%;
-    }
-    // Reset for tag `pre` and  for class `.gutter`, `.code`, `.tag`
-    pre,
-    .gutter,
-    .code,
-    .tag {
-        background-color: inherit;
-        font-family: Menlo;
-        border:      none;
-        padding:     0;
-        margin:      0;
-        // To override cursor attribute of `.tag` components
-        cursor:      text;
-    }
-    // hide gutter when code is plain text
-    &.plain {
-        .gutter {
-            display:none;
-        }
-    }
-    // Meta bar which contains name of the file and his link
-    figcaption {
-        font-size:     13px;
-        padding:       0 15px 20px;
-        margin:        0;
-        background:    #f7f8f8;
-        color:         #999999;
+figure.highlight table {
+    margin: 0;
+    display: block;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto; 
+}
 
-        a {
-            float: right;
-            color: #349ef3;
-        }
-    }
-    // Gutter which contains line numbers
-    .gutter {
-        background:   #f7f8f8;
-        border-right: 1px solid #e6e6e6;
-        padding:      0.3em 15px;
+figure.highlight pre,
+figure.highlight .gutter,
+figure.highlight .code,
+figure.highlight .tag {
+    font-family: Menlo;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: text; 
+}
 
-        .line {
-            color: #aaaaaa;
-        }
-    }
-    // Code container
-    .code {
-        padding: 0.3em 15px 0.3em 1em;
-        width:   100%;
+figure.highlight figcaption {
+    font-size: 13px;
+    padding: 10px 15px;
+    margin: 0;
+    background: #f7f7f7;
+    border-bottom: 1px solid #d9d9d9;
+    color: #999999; 
+}
 
-        pre {
-            max-width:  700px;
-            overflow-x: auto;
-        }
-    }
-    // All lines in gutter and code container
-    .line {
-        height:    1.2em;
-        font-size: 13px;
-    }
+figure.highlight figcaption a {
+    float: right; 
+}
+
+figure.highlight .gutter {
+    background: #fff;
+    border-right: 1px solid #d9d9d9;
+    padding: 0.3em 0.5em; 
+}
+
+    figure.highlight .gutter .line {
+      color: #aaaaaa; 
+}
+
+  figure.highlight .code {
+    padding: 0.3em 0.3em 0.3em 1em; 
+}
+
+figure.highlight .line {
+    height: 1.2em;
+    font-size: 13px; 
 }
 
 // Gist
