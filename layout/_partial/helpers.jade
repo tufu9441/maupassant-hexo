@@ -1,6 +1,6 @@
 mixin a_with_current(href, content, id)
   - var url = url_for(href)
-  if (href == '/' && (is_home() || is_post())) || is_current(href)
+  if (href == '.' && (is_home() || is_post())) || is_current(href)
     a.current(href=url)
       i(class=id)= ' ' + content
   else

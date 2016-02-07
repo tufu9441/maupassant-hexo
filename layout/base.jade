@@ -5,91 +5,53 @@ if page.title
 else
   - var current_title = config.title
 
-if (config.root != '/')
-  - var root = config.root
-else
-  - var root = ''
+if config.feed
+  case config.feed.type
+    when "rss2"
+      - var feed_type='application/rss+xml'
+    when "atom"
+    default
+      - var feed_type='application/atom+xml'
 
-<!DOCTYPE html>
-html(lang="#{config.language}")
+doctype html
+html(lang='#{config.language}')
   head
-    meta(http-equiv="content-type", content="text/html; charset=utf-8")
-    meta(content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0", name="viewport")
-    meta(content="yes", name="apple-mobile-web-app-capable")
-    meta(content="black-translucent", name="apple-mobile-web-app-status-bar-style")
-    meta(content="telephone=no", name="format-detection")
-    meta(name="description", content=config.description)
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+    meta(content='yes', name='apple-mobile-web-app-capable')
+    meta(content='black-translucent', name='apple-mobile-web-app-status-bar-style')
+    meta(content='telephone=no', name='format-detection')
+    meta(name='description', content=config.description)
     block title
-    link(rel='stylesheet', type='text/css', href=root + '/css/normalize.css')
-    link(rel='stylesheet', type='text/css', href=root + '/css/pure-min.css')
-    link(rel='stylesheet', type='text/css', href=root + '/css/grids-responsive-min.css')
-    link(rel='stylesheet', type='text/css', href=root + '/css/style.css')
-    link(rel='Shortcut Icon', type='image/x-icon',href='/favicon.ico')
-    link(rel='apple-touch-icon', href='/apple-touch-icon.png')
-    link(rel='apple-touch-icon-precomposed', href='/apple-touch-icon.png')
-    link(rel='alternate', type='application/atom+xml', href='/atom.xml')
+    link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/normalize.css' + '?v=' + theme.version)
+    link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/pure-min.css' + '?v=' + theme.version)
+    link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/grids-responsive-min.css' + '?v=' + theme.version)
+    link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/style.css'  + '?v=' + theme.version)
+    link(rel='Shortcut Icon', type='image/x-icon',href=url_for('favicon.ico'))
+    link(rel='apple-touch-icon', href=url_for('apple-touch-icon.png'))
+    link(rel='apple-touch-icon-precomposed', href=url_for('apple-touch-icon.png'))
+    if config.feed
+      link(rel='alternate', type=feed_type, href=url_for(config.feed.path))
 
   body: .body_container
     #header
       .site-name
         h1.hidden= current_title
-        a#logo(href='/')= config.title
+        a#logo(href=url_for('.'))= config.title
         p.description= config.subtitle
       #nav-menu
-        - for (i in theme.menu)
+        - for (var i in theme.menu)
           +a_with_current(theme.menu[i].directory, __(theme.menu[i].page), theme.menu[i].icon)
 
     #layout.pure-g
       .pure-u-1.pure-u-md-3-4: .content_container
         block content
-
       .pure-u-1-4: #sidebar
-        if theme.google_search
-          .widget
-            #search
-              != search_form()
-        if theme.baidu_search
-          .widget
-             form(action="https://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form")
-               input(type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search")
-               input(type="hidden" name="si" value="#{config.url.replace(/^https?:\/\//, '')}")
-               input(name="tn" type="hidden" value="bds")
-               input(name="cl" type="hidden" value="3")
-               input(name="ct" type="hidden" value="2097152")
-               input(name="s" type="hidden" value="on")
-        if theme.swiftype
-          .widget
-            input.st-default-search-input(placeholder='Search' type='text')
-        if theme.tinysou
-          .widget
-            form
-              input#ts-search-input(class='ts-search-input' placeholder='Search' type='text')
-        .widget
-          .widget-title= __('categories')
-          != list_categories({show_count: false})
-        .widget
-          .widget-title= __('tags')
-          .tagcloud
-            != tagcloud({min_font: 15, max_font: 15, amount: 100, orderby: 'count'})
-        .widget
-          .widget-title= __('recent')
-          != list_posts({amount: 10})
-        if theme.duoshuo
-          .widget
-            .comments-title= __('recent_comments')
-            .ds-recent-comments(data-num-items='5' data-show-avatars='0' data-show-time='1' data-show-admin='0' data-excerpt-length='32' data-show-title='1')
-        if theme.disqus
-          .widget
-            .widget-title= __('recent_comments')
-            script(type='text/javascript' src='//#{theme.disqus}.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=1&avatar_size=32&excerpt_length=20&hide_mods=1')
-        .widget
-          .widget-title= __('blogroll')
-          - for (var i in theme.links)
-            ul
-            a(href='#{theme.links[i].url}' title='#{theme.links[i].title}' target='_blank') #{theme.links[i].title}
+        each item in theme.widgets
+          != partial('_widget/' + item + '.jade')
 
     #footer= '© '
-      a(href='/', rel='nofollow')= config.title + '.'
+      a(href=url_for('.'), rel='nofollow')= config.title + '.'
       |  Powered by
       a(rel='nofollow', target='_blank', href='https://hexo.io')  Hexo.
       a(rel='nofollow', target='_blank', href='https://github.com/tufu9441/maupassant-hexo')  Theme
@@ -97,46 +59,4 @@ html(lang="#{config.language}")
       a(rel='nofollow', target='_blank', href='https://github.com/pagecho')  Cho.
 
     include _partial/totop
-    != js([root + '/js/jquery.min.js', root + '/js/totop.js'])
-
-    if theme.fancybox
-      != js([root + '/js/fancybox.pack.js', root + '/js/jquery.fancybox.js'])
-      != css(root + '/css/jquery.fancybox.css')
-
-    if theme.duoshuo
-      script.
-        var duoshuoQuery = {short_name:'#{theme.duoshuo}'};
-        (function() {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';ds.async = true;
-            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0]
-                || document.getElementsByTagName('body')[0]).appendChild(ds);
-        })();
-
-    if theme.tinysou
-      script.
-        var option = {
-          engineKey: '#{theme.tinysou}'
-        };
-        (function(w,d,t,u,n,s,e){
-          s = d.createElement(t);
-          s.src = u;
-          s.async = 1;
-          w[n] = function(r){
-            w[n].opts = r;
-          };
-          e = d.getElementsByTagName(t)[0];
-          e.parentNode.insertBefore(s, e);
-        })(window,document,'script','//tinysou-cdn.b0.upaiyun.com/ts.js','_ts');
-        _ts(option);
-
-    if theme.swiftype
-      script.
-        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-        _st('install','＃{theme.swiftype}','2.0.0');
+    include _partial/after_footer

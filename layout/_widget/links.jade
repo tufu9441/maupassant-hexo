@@ -1,0 +1,5 @@
+.widget
+  .widget-title= __('blogroll')
+  - for (var i in theme.links)
+    ul
+    a(href='#{theme.links[i].url}' title='#{theme.links[i].title}' target='_blank') #{theme.links[i].title}

@@ -1,0 +1,8 @@
+if theme.duoshuo
+  .widget
+    .comments-title= __('recent_comments')
+    .ds-recent-comments(data-num-items='5' data-show-avatars='0' data-show-time='1' data-show-admin='0' data-excerpt-length='32' data-show-title='1')
+if theme.disqus
+  .widget
+    .widget-title= __('recent_comments')
+    script(type='text/javascript' src='//#{theme.disqus}.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=1&avatar_size=32&excerpt_length=20&hide_mods=1')

@@ -6,11 +6,11 @@ block title
 block content
   .post.post-page
     h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format) + " | "
+    .post-meta= page.date.format(config.date_format)
       if page.categories.length > 0
-        span.categories= __('belongsto')
+        span.categories= " | " + __('belongsto')
           for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
+            a(href=url_for(category.path))= " " + category.name
     if theme.duoshuo
       span.ds-thread-count(data-thread-key=page.path)
     if theme.disqus
@@ -26,7 +26,7 @@ block content
       .tags
         for tag in page.tags.toArray()
           a(href=url_for(tag.path))= tag.name
-    include _partial/post-nav
+    include _partial/post_nav
     if theme.duoshuo
       div(class='ds-share flat' data-thread-key=page.path, data-title=page.title, data-url=page.permalink)
          .ds-share-inline
