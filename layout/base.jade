@@ -27,6 +27,7 @@ html(lang='#{config.language}')
     link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/pure-min.css' + '?v=' + theme.version)
     link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/grids-responsive-min.css' + '?v=' + theme.version)
     link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/style.css'  + '?v=' + theme.version)
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
     link(rel='Shortcut Icon', type='image/x-icon',href=url_for('favicon.ico'))
     link(rel='apple-touch-icon', href=url_for('apple-touch-icon.png'))
     link(rel='apple-touch-icon-precomposed', href=url_for('apple-touch-icon.png'))
@@ -60,3 +61,5 @@ html(lang='#{config.language}')
 
     include _partial/totop
     include _partial/after_footer
+
+    script(type='text/javascript', src=url_for(theme.js) + '/share.js')

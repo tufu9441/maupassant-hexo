@@ -11,6 +11,9 @@ block content
         span.categories= " | " + __('belongsto')
           for category in page.categories.toArray()
             a(href=url_for(category.path))= " " + category.name
+
+    if theme.isShare
+      a.article-share-link(data-url='#{page.permalink}', data-id='#{page._id}') Share
     if theme.duoshuo
       span.ds-thread-count(data-thread-key=page.path)
     if theme.disqus
@@ -42,5 +45,7 @@ block content
               li
                 a(class='ds-wechat' href='javascript:void(0);' data-service='wechat') 微信
             .ds-share-icons-more
+
+
 
     include _partial/comments

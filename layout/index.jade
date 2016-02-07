@@ -12,6 +12,8 @@ block content
         a(href=url_for(post.path))
           +title(post)
       .post-meta= post.date.format(config.date_format)
+      if theme.isShare
+        a.article-share-link(data-url='#{post.permalink}', data-id='#{post._id}') Share
       if theme.duoshuo
         span.ds-thread-count(data-thread-key=post.path)
       if theme.disqus
