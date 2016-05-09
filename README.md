@@ -90,7 +90,7 @@ version: 0.0.0
 - baidu_analytics - [Baidu Analytics](http://tongji.baidu.com) tracking id
 - shareto - Enable share button
 - busuanzi - Enable [Busuanzi](http://busuanzi.ibruce.info) page views
-- google_hub, google_ad_slot - Enable [Google AdSense](google_hub) at footer
+- google_hub, google_ad_slot - Enable [Google AdSense](www.google.com/AdSense) at footer
 - menu - Customize your menu of pages here, just follow the format of existied items. Don't forget to create corresponding folders inlcuding `index.md` in `source` folder to ensure the pages will correctly display. [FontAwesome](http://fontawesome.io) icon fonts have been integrated, and you can choose other icons you like [here](http://fontawesome.io/icons/) and use them according to the instruction.
 - widgets - Choose and arrange the widgets in sidebar here.
 - links - Edit your blogroll here.
