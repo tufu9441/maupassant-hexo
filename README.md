@@ -38,6 +38,8 @@ google_analytics: ## Your Google Analytics tracking id, e.g. UA-42425684-2
 baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 shareto: true ## If you want to use the share button please set the value to true.
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
+google_hub: ## Your Google pub id, e.g. pub-6877037964485253
+google_ad_slot: ## Your Google Ad unit id, e.g. 7233298824
 
 menu:
   - page: home
@@ -98,12 +100,18 @@ version: 0.0.0
 - baidu_analytics - [Baidu Analytics](http://tongji.baidu.com) tracking id
 - shareto - Enable share button
 - busuanzi - Enable [Busuanzi](http://busuanzi.ibruce.info) page views
+- google_hub, google_ad_slot - Enable [Google AdSense](www.google.com/AdSense) at footer
 - menu - Customize your menu of pages here, just follow the format of existied items. Don't forget to create corresponding folders inlcuding `index.md` in `source` folder to ensure the pages will correctly display. [FontAwesome](http://fontawesome.io) icon fonts have been integrated, and you can choose other icons you like [here](http://fontawesome.io/icons/) and use them according to the instruction.
 - widgets - Choose and arrange the widgets in sidebar here.
 - links - Edit your blogroll here.
 - timeline - Show a timeline of the website by setting `layout: timeline` of a page.
 - Static files - Static files directory, for convenience of CDN usage.
 - Theme version - For automatic refresh of static files on CDN.
+
+### Note for Google AdSense
+- The `AdBlock` plugin (or something like that) may disable Google Ad
+- The first time when you did config for `google_hub` and `google_ad_slot`, it may caused `Bad Request (400)` error. Don't worry about it, just reload the web page multiple times. see more at [400 Bad Request with Google AdSense](http://stackoverflow.com/questions/19139171/400-bad-request-with-google-adsense)
+- The Google Ad is at the position of footer part by default. Hence don't delete the `footer.jade` file.
 
 ## Features
 #### Logo
