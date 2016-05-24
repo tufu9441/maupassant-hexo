@@ -96,11 +96,6 @@ version: 0.0.0
 - Static files - Static files directory, for convenience of CDN usage.
 - Theme version - For automatic refresh of static files on CDN.
 
-### Note for Google AdSense
-- The `AdBlock` plugin (or something like that) may disable Google Ad
-- The first time when you did config for `google_hub` and `google_ad_slot`, it may caused `Bad Request (400)` error. Don't worry about it, just reload the web page multiple times. see more at [400 Bad Request with Google AdSense](http://stackoverflow.com/questions/19139171/400-bad-request-with-google-adsense)
-- The Google Ad is at the position of footer part by default. Hence don't delete the `footer.jade` file.
-
 ## Features
 #### Logo
 You can set a **favicon.ico** for your website, please put it into  `source` folder of hexo directory, recommended size: 32px*32px.
