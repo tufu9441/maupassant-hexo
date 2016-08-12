@@ -178,7 +178,7 @@ donate:
   message: 此文有用?求鼓励! # donate message
   qrcode: http://7xlune.com1.z0.glb.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE.png  # Your account QR code.
 ```
-in theme's `_config.yml`, here is an example: [http://qifuguang.me/2015/09/02/[Java%E5%B9%B6%E5%8F%91%E5%8C%85%E5%AD%A6%E4%B9%A0%E4%B8%83]%E8%A7%A3%E5%AF%86ThreadLocal/](http://qifuguang.me/2015/09/02/[Java%E5%B9%B6%E5%8F%91%E5%8C%85%E5%AD%A6%E4%B9%A0%E4%B8%83]%E8%A7%A3%E5%AF%86ThreadLocal/)
+in theme's `_config.yml`, here is an example: [http://qifuguang.me](http://qifuguang.me/2015/09/02/[Java%E5%B9%B6%E5%8F%91%E5%8C%85%E5%AD%A6%E4%B9%A0%E4%B8%83]%E8%A7%A3%E5%AF%86ThreadLocal/)
 
 ## Solutions
 - Check whether your Terminal's current directory is in hexo's root directory which contains `source/`, `themes/`, etc.
