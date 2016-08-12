@@ -1,0 +1,15 @@
+.post-donate
+    #donate_board.donate_bar.center
+        a#btn_donate.btn_donate(href='javascript:;', title='打赏')
+        .donate_txt
+         |  &uarr;
+         br
+         != theme.donate.message
+         br
+    #donate_guide.donate_bar.center.hidden
+        img(src=theme.donate.qrcode, title='微信打赏')
+    script(type='text/javascript').
+        document.getElementById('btn_donate').onclick = function(){
+            $('#donate_board').addClass('hidden');
+            $('#donate_guide').removeClass('hidden');
+        }

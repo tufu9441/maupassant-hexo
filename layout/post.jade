@@ -48,4 +48,6 @@ block content
               li
                 a(class='ds-wechat' href='javascript:void(0);' data-service='wechat') 微信
             .ds-share-icons-more
+    if theme.donate.enabled == true
+      include _partial/donate
     include _partial/comments
