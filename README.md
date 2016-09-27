@@ -39,6 +39,7 @@ baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 show_category_count: false ## If you want to show the count of categories in the sidebar widget please set the value to true.
 shareto: true ## If you want to use the share button please set the value to true.
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
+total_visit_busuanzi: true ## First,you must set busuanzi true, then you can show total count about site views and user views
 widgets_on_small_screens: false ## Set to true to enable widgets on small screens.
 
 menu:
@@ -101,6 +102,7 @@ version: 0.0.0
 - show_category_count - Show the count of categories in the sidebar widget.
 - shareto - Enable share button
 - busuanzi - Enable [Busuanzi](http://busuanzi.ibruce.info) page views
+- total_visit_busuanzi - Enable [Busuanzi](http://busuanzi.ibruce.info) site views and visitors, make sure `busuanzi` set true.
 - widgets_on_small_screens - Show the widgets at the bottom of small screens.
 - menu - Customize your menu of pages here, just follow the format of existied items. Don't forget to create corresponding folders inlcuding `index.md` in `source` folder to ensure the pages will correctly display. [FontAwesome](http://fontawesome.io) icon fonts have been integrated, and you can choose other icons which you like [here](http://fontawesome.io/icons/) and use them according to the instruction.
 - widgets - Choose and arrange the widgets in sidebar here.

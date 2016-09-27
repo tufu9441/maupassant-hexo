@@ -1,4 +1,16 @@
-#footer= '© '
+#footer
+  if theme.busuanzi == true
+    if theme.total_visit_busuanzi == true
+      div
+        | Total
+        span#busuanzi_container_site_pv
+          span= ' '
+          span#busuanzi_value_site_pv
+        span(rel='nofollow')= ' ' + __(' hits, ')
+        span#busuanzi_container_site_uv
+          span#busuanzi_value_site_uv
+        span(rel='nofollow')= ' ' + __(' visitors.')
+  = '© '
   a(href=url_for('.'), rel='nofollow')= config.title + '.'
   |  Powered by
   a(rel='nofollow', target='_blank', href='https://hexo.io')  Hexo.
