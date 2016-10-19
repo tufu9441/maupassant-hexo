@@ -1831,3 +1831,15 @@ em.search-keyword {
   font-style: normal;
   color: #01579f;
 }
+
+code {
+    padding: 2px 4px;
+    color: #c7254e;
+    background: #f9f2f4;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+code, pre {
+    font-family: consolas,Menlo,"PingFang SC","Microsoft YaHei",monospace;
+}
