@@ -36,6 +36,8 @@ block content
       p(class='readmore')
         a(href=url_for(post.path))= __('Readmore')
 
+    hr.hrtest
+
   include _partial/paginator
   if theme.disqus
     script(id='dsq-count-scr', src='//#{theme.disqus}.disqus.com/count.js', async)

@@ -1851,3 +1851,20 @@ code, pre {
 .ds-thread-title a {
     color: #01579f;
 }
+
+.hrtest {
+    height: 1px;
+    border: none;
+    border-top: 1px dashed #a99e9e;
+    width: 80px;
+    margin: 30px auto;
+}
+
+.readmore {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.readmore a {
+    float: none;
+}
