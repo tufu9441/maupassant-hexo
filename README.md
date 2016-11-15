@@ -170,6 +170,16 @@ See the [example](http://zhongpu.info/2016/05/06/Mathjax%20and%20Hexo/).
 #### Languages
 Seven languages are available for this theme currently: Simplified Chinese (zh-CN), Traditional Chinese (zh-TW), English (en), French (fr-FR), German (de-DE), Korean (ko) and Spanish (es-ES). Contributions of translating to other languages will be highly appreciated.
 
+#### Donate
+Add
+```YAML
+donate:
+  enabled: true             # If true, allowed donate; if false, disable donate
+  message: 此文有用?求鼓励! # donate message
+  qrcode: http://7xlune.com1.z0.glb.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE.png  # Your account QR code.
+```
+in theme's `_config.yml`, here is an example: [http://qifuguang.me](http://qifuguang.me/2015/09/02/[Java%E5%B9%B6%E5%8F%91%E5%8C%85%E5%AD%A6%E4%B9%A0%E4%B8%83]%E8%A7%A3%E5%AF%86ThreadLocal/)
+
 ## Solutions
 - Check whether your Terminal's current directory is in hexo's root directory which contains `source/`, `themes/`, etc.
 

@@ -53,6 +53,11 @@ timeline:
   - num: 4
     word: More
 
+donate:
+  enabled: true
+  message: 此文有用? 求鼓励!
+  qrcode: http://7xlune.com1.z0.glb.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE.png 
+
 # Static files
 js: js
 css: css
