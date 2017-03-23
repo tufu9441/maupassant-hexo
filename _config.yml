@@ -21,12 +21,15 @@ menu:
   - page: archive
     directory: archives/
     icon: fa-archive
+  - page: tags
+    directory: tags/
+    icon: fa-tags
   - page: about
     directory: about/
     icon: fa-user
-  - page: rss
-    directory: atom.xml
-    icon: fa-rss
+#  - page: rss
+#    directory: atom.xml
+#    icon: fa-rss
 
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
   - search
@@ -37,12 +40,12 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
   - links
 
 links:
-  - title: site-name1
-    url: http://www.example1.com/
-  - title: site-name2
-    url: http://www.example2.com/
-  - title: site-name3
-    url: http://www.example3.com/
+  - title: Github
+    url: https://github.com/nathanjiang/
+  - title: Zhihu
+    url: http://www.zhihu.com/people/nathanjiang/
+  - title: Weibo
+    url: http://weibo.com/275533207/
 
 timeline:
   - num: 1

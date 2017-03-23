@@ -1,0 +1,14 @@
+if is_home()
+  include index
+else if is_tag() || page.layout=="tags"
+  include tags
+else if is_archive() || page.layout=="archives"
+  include archives
+else if is_category() || page.layout=="categories"
+  include categories
+else if page.layout=="about"
+  include about
+else if is_post()
+  include post
+else
+  include page
