@@ -1,22 +1,21 @@
 extends template
 
 block title
-  if page.category
-     title= page.category + ' | ' + config.title
   if page.tag
-     title= page.tag + ' | ' + config.title
-  if page.archive
-     title= __('archive') + ' | ' + config.title
+    title= page.tag + ' | ' + config.title
+  else
+    title= 'Tags' + ' | ' + config.title
+
 
 block content
+  h1.label-title=  __('reading_label', page.tag==null?"tags":page.tag)
   if !page.tag
-    if page.category || page.tag
-      h1.label-title=  __('reading_label', page.category || page.tag)
-     .post
+    .post
       .post-archive
         //Use lodash to classify posts. See https://lodash.com/docs#groupBy
         for _attr in site.tags.toArray()
           each posts, res in _.groupBy(site.posts.toArray(), function(p){var flag=0;_.forIn(  p.tags['data'],function(item,idx){ if(item.name==_attr.name) flag+=1}); return flag;})
+            // the posts of each tag
             if res==1
               h2= _attr.name
               ul.listing
@@ -25,11 +24,7 @@ block content
                     span.date= post.date.format('YYYY/MM/DD')
                     a(href=url_for(post.path), title=post.title)
                       +title(post)
-
-
   else
-    if page.category || page.tag
-      h1.label-title=  __('reading_label', page.category || page.tag)
     .post
       .post-archive
         //Use lodash to classify posts. See https://lodash.com/docs#groupBy
@@ -42,5 +37,3 @@ block content
                 a(href=url_for(post.path), title=post.title)
                   +title(post)
   include _partial/paginator.jade
-
-
