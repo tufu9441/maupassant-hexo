@@ -7,7 +7,7 @@ Maupassant is a theme originated from a Typecho theme, now available in your Hex
 [Preview](http://www.jiangyu.me)｜[中文文档](https://www.haomwei.com/technology/maupassant-hexo.html)
 
 
-![](http://www.jiangyu.me/source/img/hexo.png)
+![](http://www.jiangyu.me/img/hexo.jpg)
 
 ## Installation
 Install theme and renderers:
