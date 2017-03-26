@@ -15,6 +15,14 @@ if theme.duoshuo
             || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
 
+if theme.gentie
+  script.
+    var yunModuleEnv = true;
+  script(src='https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js')
+  script.
+    var yunTieProductKey = "#{theme.gentie}";
+    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vZXh0ZW5kL2xpc3Rfam9pbl9zY3JpcHQuaHRtbA==", true);
+
 if theme.tinysou
   script.
     var option = {

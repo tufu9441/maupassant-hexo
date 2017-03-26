@@ -19,6 +19,11 @@ block content
         a.ds-thread-count(data-thread-key=post.path, href=url_for(post.path) + '#comments')
       if theme.disqus
         a.disqus-comment-count(data-disqus-identifier=post.path, href=url_for(post.path) + '#disqus_thread')
+      if theme.gentie
+         a.ds-thread-count(class="cloud-tie-join-count", href=url_for(post.path))
+          <span class="icon-comment"></span>
+          <span lang='join-count' class='join-count' data-url='#{config.url}#{url_for(post.path)}'>0</span>
+          <span>Discuss</span>
       if post.description
         .post-content
           != post.description
