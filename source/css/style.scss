@@ -1,11 +1,10 @@
 /**
  *
  * @package Maupassant
- * @author cho
- * @version 2.0
- * @link http://chopstack.com
+ * @author nathan
+ * @version 1.0
+ * @link http://jiangyu.me
  */
-
 /*
 pure css setting
 When setting the primary font stack, apply it to the Pure grid units along
@@ -27,6 +26,90 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-size: 14px;
 }
+
+
+
+/*animation starts*/
+
+.animated {
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    .hinge {
+        -webkit-animation-duration: 1s;
+        -moz-animation-duration: 1s;
+        -ms-animation-duration: 1s;
+        -o-animation-duration: 1s;
+        animation-duration: 1s;
+    }
+}
+
+
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-moz-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+
+@-o-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -o-transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -o-transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    -moz-animation-name: fadeInDown;
+    -o-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+/*animation ends*/
+
 .body_container {
     padding: 0 60px;
     max-width: 1150px;
@@ -400,7 +483,7 @@ div {
 }
 
 #footer {
-    padding: .8em 0 3.6em;
+    padding: .8em 0 2em;
     margin-top: 1em;
     line-height: 2.5;
     color: #6E7173;

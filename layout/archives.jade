@@ -1,15 +1,10 @@
-extends base
+extends template
 
 block title
-  if page.category
-     title= page.category + ' | ' + config.title
-  if page.tag
-     title= page.tag + ' | ' + config.title
   if page.archive
      title= __('archive') + ' | ' + config.title
+
 block content
-  if page.category || page.tag
-      h1.label-title=  __('reading_label', page.category || page.tag)
   .post
     .post-archive
         //Use lodash to classify posts. See https://lodash.com/docs#groupBy

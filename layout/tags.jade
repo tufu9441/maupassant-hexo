@@ -1,0 +1,39 @@
+extends template
+
+block title
+  if page.tag
+    title= page.tag + ' | ' + config.title
+  else
+    title= 'Tags' + ' | ' + config.title
+
+
+block content
+  h1.label-title=  __('reading_label', page.tag==null?"tags":page.tag)
+  if !page.tag
+    .post
+      .post-archive
+        //Use lodash to classify posts. See https://lodash.com/docs#groupBy
+        for _attr in site.tags.toArray()
+          each posts, res in _.groupBy(site.posts.toArray(), function(p){var flag=0;_.forIn(  p.tags['data'],function(item,idx){ if(item.name==_attr.name) flag+=1}); return flag;})
+            // the posts of each tag
+            if res==1
+              h2= _attr.name
+              ul.listing
+                for post in posts
+                  li
+                    span.date= post.date.format('YYYY/MM/DD')
+                    a(href=url_for(post.path), title=post.title)
+                      +title(post)
+  else
+    .post
+      .post-archive
+        //Use lodash to classify posts. See https://lodash.com/docs#groupBy
+        each posts, year in _.groupBy(page.posts.toArray(), function(p){return -p.date.format('YYYY')})
+          h2= -year
+          ul.listing
+            for post in posts
+              li
+                span.date= post.date.format('YYYY/MM/DD')
+                a(href=url_for(post.path), title=post.title)
+                  +title(post)
+  include _partial/paginator.jade

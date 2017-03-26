@@ -1,0 +1,40 @@
+//  
+//  @package Maupassant
+//  @author nathan
+//  @version 1.0
+//  @link http://jiangyu.me
+//  
+//  -------------------------------------------------------------------------------------------------------------------
+//  |              path              | page.layout | is_home | is_tags | is_archive | is_category | is_post | is_page |
+//  -------------------------------------------------------------------------------------------------------------------
+//  | root/                          |      -      |    1    |    0    |     0      |      0      |    0    |    0    | 
+//  | root/tags/[tag]/               |      -      |    0    |    1    |     0      |      0      |    0    |    0    | 
+//  | root/tags/                     |     tags*   |    0    |    0    |     0      |      0      |    0    |    1    |
+//  | root/archives/[archive]/       |      -      |    0    |    0    |     1      |      0      |    0    |    0    |
+//  | root/archives/                 |   archives* |    0    |    0    |     0      |      0      |    0    |    1    |
+//  | root/categories/[category]/    |      -      |    0    |    0    |     0      |      1      |    0    |    0    |
+//  | root/categories/               |  categories*|    0    |    0    |     0      |      0      |    0    |    1    |
+//  | root/[custom]/                 |   [cumtom]  |    0    |    0    |     0      |      0      |    0    |    1    |
+//  | file in source/_posts          |     post    |    0    |    0    |     0      |      0      |    1    |    0    |
+//  -------------------------------------------------------------------------------------------------------------------
+//  * The ["root/tags/", "root/archives/", "root/categories/"] is the special version of root/[custom]
+//  * The page.layout attr of "root/[custom]/" is set in the file - source/[custom]/index.md > layout: "[custom]"
+// 
+//  Every url has the attrs in the table before render the template, 
+//  then, the render rule is based on the following sentences.
+//
+
+if is_home()
+  include index
+else if is_tag() || page.layout=="tags"
+  include tags
+else if is_archive() || page.layout=="archives"
+  include archives
+else if is_category() || page.layout=="categories"
+  include categories
+else if page.layout=="about"
+  include about
+else if is_post()
+  include post
+else if is_page()
+  include page
