@@ -93,6 +93,7 @@ version: 0.0.0
 - duoshuo - [Duoshuo](http://duoshuo.com) shortname
 - disqus - [Disqus](https://disqus.com) shortname
 - uyan - [Uyan](http://www.uyan.cc) id
+- gentie - [Gentie](https://gentie.163.com/) ProductKey
 - google_search - Default search engine
 - baidu_search - Search engine for users in China
 - swiftype - [Swiftype Search](https://swiftype.com) key
