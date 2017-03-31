@@ -17,6 +17,9 @@ menu:
   - page: home
     directory: .
     icon: fa-home
+  - page: share
+    directory: share/
+    icon: fa-share-square
   - page: archive
     directory: archives/
     icon: fa-archive
@@ -33,15 +36,14 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
   - tag
   - recent_posts
   - recent_comments
-  ## - links
+  - links
 
 links:
-  - title: site-name1
-    url: http://www.example1.com/
-  - title: site-name2
-    url: http://www.example2.com/
-  - title: site-name3
-    url: http://www.example3.com/
+  - title: vpnfree
+    url: https://vpnfree.online/
+  #- title: site-name2
+    #url: http://www.example2.com/
+
 
 timeline:
   - num: 1
