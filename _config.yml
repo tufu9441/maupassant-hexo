@@ -14,6 +14,7 @@ show_category_count: false ## If you want to show the count of categories in the
 toc_number: true ## If you want to add list number to toc please set the value to true.
 shareto: true ## If you want to use the share button please set the value to true.
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
+total_visit_busuanzi: true ## First,you must set busuanzi true, then you can show total count about site views and user views
 widgets_on_small_screens: false ## Set to true to enable widgets on small screens.
 
 menu:
