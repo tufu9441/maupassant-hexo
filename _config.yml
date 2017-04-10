@@ -10,7 +10,7 @@ tinysou: ## Your tinysou_key, e.g. 4ac092ad8d749fdc6293
 self_search: true ## Use a jQuery-based local search engine, true/false.
 google_analytics: UA-94086924-1 ## Your Google Analytics tracking id, e.g. UA-42425684-2
 baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
-show_category_count: false ## If you want to show the count of categories in the sidebar widget please set the value to true.
+show_category_count: true ## If you want to show the count of categories in the sidebar widget please set the value to true.
 toc_number: true ## If you want to add list number to toc please set the value to true.
 shareto: true ## If you want to use the share button please set the value to true.
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
@@ -42,10 +42,10 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
   - links
 
 links:
-  - title: vpnfree
+  - title: vpnfree 免费ss分享
     url: https://vpnfree.online/
-  #- title: site-name2
-    #url: http://www.example2.com/
+  - title: vpnhome GCE高速线路
+    url: https://vpnhome.top/
 
 
 timeline:
