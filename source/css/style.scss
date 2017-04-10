@@ -1831,3 +1831,44 @@ em.search-keyword {
   font-style: normal;
   color: #01579f;
 }
+
+code {
+    padding: 2px 4px;
+    color: #c7254e;
+    background: #f9f2f4;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+code, pre {
+    font-family: consolas,Menlo,"PingFang SC","Microsoft YaHei",monospace;
+}
+
+.ds-thread-title {
+    margin: 10px 0px !important;
+}
+
+.ds-thread-title a {
+    color: #01579f;
+}
+
+.hrtest {
+    height: 1px;
+    border: none;
+    border-top: 1px dashed #a99e9e;
+    width: 80px;
+    margin: 30px auto;
+}
+
+.readmore {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.readmore a {
+    float: none;
+}
+
+.description {
+    margin-top: 20px !important;
+}

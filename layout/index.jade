@@ -15,6 +15,11 @@ block content
         a(href=url_for(post.path))
           +title(post)
       .post-meta= post.date.format(config.date_format)
+        if post.categories.length > 0
+          span= ' | '
+          span.category
+            for category in post.categories.toArray()
+              a(href=url_for(category.path))= category.name
       if theme.duoshuo
         a.ds-thread-count(data-thread-key=post.path, href=url_for(post.path) + '#comments')
       if theme.disqus
@@ -42,6 +47,8 @@ block content
             != post.content.substring(0, br)
       p(class='readmore')
         a(href=url_for(post.path))= __('Readmore')
+
+    hr.hrtest
 
   include _partial/paginator
   if theme.disqus
