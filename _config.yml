@@ -38,7 +38,7 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
   - category
   - tag
   - recent_posts
-  - recent_comments
+  ##- recent_comments
   - links
 
 links:
