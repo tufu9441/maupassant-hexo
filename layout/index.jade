@@ -10,7 +10,7 @@ block content
 
   for post in page.posts.toArray()
     .post
-      h2.post-title
+      h1.post-title
         include _partial/helpers
         a(href=url_for(post.path))
           +title(post)

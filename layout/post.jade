@@ -25,7 +25,7 @@ block content
       div(class='clear')
         div(id='toc' class='toc-article')
           div(class='toc-title')= __('contents')
-          != toc(page.content)
+          != toc(page.content, {list_number: theme.toc_number})
     .post-content
       != page.content
     if theme.shareto == true

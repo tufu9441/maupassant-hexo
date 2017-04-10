@@ -1,7 +1,7 @@
 if theme.fancybox == true
-  script(type='text/javascript', src='//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js', async)
+  script(type='text/javascript', src='//cdn.bootcss.com/fancybox/3.0.47/jquery.fancybox.min.js', async)
   script(type='text/javascript', src=url_for(theme.js) + '/fancybox.js' + '?v=' + theme.version, async)
-  link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/jquery.fancybox.css' + '?v=' + theme.version)
+  link(rel='stylesheet', type='text/css', href='//cdn.bootcss.com/fancybox/3.0.47/jquery.fancybox.min.css')
 
 if theme.duoshuo
   script.
