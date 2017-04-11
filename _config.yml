@@ -20,6 +20,9 @@ menu:
   - page: home
     directory: .
     icon: fa-home
+  - page: vps
+    directory: vps/
+    icon: fa-cloud
   - page: share
     directory: share/
     icon: fa-share-square
