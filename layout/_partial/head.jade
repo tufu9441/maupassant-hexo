@@ -1,0 +1,19 @@
+head
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+    meta(content='yes', name='apple-mobile-web-app-capable')
+    meta(content='black-translucent', name='apple-mobile-web-app-status-bar-style')
+    meta(content='telephone=no', name='format-detection')
+    meta(name='description', content=config.description)
+    block title
+    link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/style.css' + '?v=' + theme.version)
+    link(rel='stylesheet', type='text/css', href='//cdn.bootcss.com/normalize/6.0.0/normalize.min.css')
+    link(rel='stylesheet', type='text/css', href='//cdn.bootcss.com/pure/0.6.2/pure-min.css')
+    link(rel='stylesheet', type='text/css', href='//cdn.bootcss.com/pure/0.6.2/grids-responsive-min.css')
+    link(rel='stylesheet', href='//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    script(type='text/javascript', src='//cdn.bootcss.com/jquery/3.2.1/jquery.min.js')
+    link(rel='Shortcut Icon', type='image/x-icon', href=url_for('favicon.ico'))
+    link(rel='apple-touch-icon', href=url_for('apple-touch-icon.png'))
+    link(rel='apple-touch-icon-precomposed', href=url_for('apple-touch-icon.png'))
+    if config.feed
+      link(rel='alternate', type=feed_type, href=url_for(config.feed.path))
