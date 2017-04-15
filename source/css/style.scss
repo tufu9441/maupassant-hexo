@@ -177,6 +177,19 @@ div {
                 box-shadow: none;
             }
         }
+	.pkofname{
+	
+	}
+	.purikura{
+	
+	}
+	.widget_name{
+	    p{
+		font-size: 14px;
+		text-align: center;
+		margin-right: 18%;
+	    }
+	}
     }
 }
 
@@ -343,10 +356,33 @@ div {
             margin-right: .5em;
             &:before {
                 font-family: "FontAwesome";
-                content: "\f0c6";
+                content: "\f02b";
                 padding-right: 0.3em;
             }
         }
+	a:hover {
+	    border-bottom: 1.5px dotted gray;
+	    text-decoration: none;
+	}
+    }
+    .tagss {
+        padding-bottom: 1em;
+        text-align: center;
+        font-size: 28.5px;
+        line-height: 2;
+	font-family: 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
+        a {
+            margin-right: .5em;
+            text-decoration: none;
+            border-bottom: 1px solid #999;
+            display: inline-block;
+	    line-height: 1.5;
+            margin: 10px;
+        }
+	a:hover {
+	    border-bottom: 1px dotted gray;
+	    text-decoration: none;
+	}
     }
 }
 
@@ -777,7 +813,7 @@ pre {
   position: absolute;
   top: -3%;
   right: 0;
-  margin-top: -20px;
+  margin-top: -25px;
   line-height: 100%;
 }
 #process .born {

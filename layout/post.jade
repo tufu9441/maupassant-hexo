@@ -1,7 +1,19 @@
 extends base
 
+block soso
+  meta(name='apple-mobile-web-app-title' content=page.title)
+  meta(name='keywords', content=page.sotag)
+  meta(name='description', content=page.soexcerpt)
+  meta(property='og:type', content='article')
+  meta(property='og:title', content=page.title)
+  meta(property='og:description', content=page.soexcerpt)
+  meta(property='og:url', content=config.url + url_for(page.path))
+  meta(name='twitter:card', content='summary')
+  meta(name='twitter:title', content=page.title)
+  meta(name='twitter:description', content=page.soexcerpt)
+
 block title
-  title= page.title + ' | ' + config.title
+  title= page.title + ' - ' + config.title
 
 block content
   .post
@@ -29,7 +41,7 @@ block content
       div(class='clear')
         div(id='toc' class='toc-article')
           div(class='toc-title')= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
+          != toc(page.content)
     .post-content
       != page.content
     if theme.shareto == true

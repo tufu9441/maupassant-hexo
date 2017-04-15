@@ -1,4 +1,4 @@
 if page.tags
   .tags
     for tag in page.tags.toArray()
-      a(href=url_for(tag.path))= tag.name
+      a(style='border-bottom:1.5px solid #fff; margin:0px 8px 0px 0px;' href=url_for(tag.path))= tag.name

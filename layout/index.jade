@@ -3,7 +3,7 @@ extends base
 
 block title
   if config.subtitle
-    title= config.title + ' | ' + config.subtitle
+    title= config.title + ' ' + config.subtitle
   else
     title= config.title
 block content
@@ -20,7 +20,7 @@ block content
       if theme.disqus
         a.disqus-comment-count(data-disqus-identifier=post.path, href=url_for(post.path) + '#disqus_thread')
       if theme.gentie
-         a.ds-thread-count(class="cloud-tie-join-count", href=url_for(post.path))
+         a.ds-thread-count(class="cloud-tie-join-count", href=url_for(post.path) + '#comments')
           <span class="icon-comment"></span>
           <span lang='join-count' class='join-count' data-url='#{config.url}#{url_for(post.path)}'>0</span>
           <span>Discuss</span>

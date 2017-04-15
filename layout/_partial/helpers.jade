@@ -3,7 +3,7 @@ mixin a_with_current(href, content, id)
   if (href == '.' && (is_home() || is_post())) || is_current(href)
     a.current(href=url)
       i(class='fa' + ' ' + id)= ' ' + content
-  else if (href == 'archives/' && is_tag())
+  else if (href == 'tags/' && is_tag())
     a.current(href=url)
       i(class='fa' + ' ' + id)= ' ' + content
   else if (href == 'archives/' && is_category())
