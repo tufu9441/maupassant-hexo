@@ -19,6 +19,10 @@ block content
         a.ds-thread-count(data-thread-key=post.path, href=url_for(post.path) + '#comments')
       if theme.disqus
         a.disqus-comment-count(data-disqus-identifier=post.path, href=url_for(post.path) + '#disqus_thread')
+      if theme.gentie
+        a.ds-thread-count(class="cloud-tie-join-count", href=url_for(post.path) + '#comments')
+          <span lang='join-count' class='join-count' data-url='#{config.url}#{url_for(post.path)}'>0</span>
+          <span>Discuss</span>
       if post.description
         .post-content
           != post.description
@@ -46,3 +50,10 @@ block content
   include _partial/paginator
   if theme.disqus
     script(id='dsq-count-scr', src='//#{theme.disqus}.disqus.com/count.js', async)
+  if theme.gentie
+    script.
+      var yunModuleEnv = true;
+    script(src='//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js')
+    script.
+      var yunTieProductKey = '#{theme.gentie}';
+      Tie.loader('#{theme.gentie_list}', true);

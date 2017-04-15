@@ -21,6 +21,10 @@ block content
       a.ds-thread-count(data-thread-key=page.path, href=url_for(page.path) + '#comments')
     if theme.disqus
       a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
+    if theme.gentie
+      a.ds-thread-count(class='cloud-tie-join-count', href=url_for(page.path) + '#comments')
+        <span style="margin: 0px; color: #6E7173;" class="join-count">0</span>
+        <span>Discuss</span>
     if page.toc
       div(class='clear')
         div(id='toc' class='toc-article')
