@@ -1,0 +1,38 @@
+include _partial/helpers
+
+if page.title
+  - var current_title = page.title
+else
+  - var current_title = config.title
+
+if config.feed
+  case config.feed.type
+    when 'rss2'
+      - var feed_type='application/rss+xml'
+    when 'atom'
+    default
+      - var feed_type='application/atom+xml'
+
+doctype html
+html(lang='#{config.language}')
+
+  include _partial/head
+
+  body: .body_container
+    #header
+      .site-name
+        h1.hidden= current_title
+        a#logo(href=url_for('.'))= config.title
+        p.description= config.subtitle
+      #nav-menu
+        - for (var i in theme.menu)
+          +a_with_current(theme.menu[i].directory, __(theme.menu[i].page), theme.menu[i].icon)
+
+    #layout.pure-g
+      .pure-u-1.pure-u-md-4-4: .content_container
+        block content
+      .pure-u-1.pure-u-md-4-4
+        != partial('_partial/footer.jade')
+
+    include _partial/totop
+    include _partial/after_footer

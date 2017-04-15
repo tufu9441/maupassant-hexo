@@ -1,0 +1,4 @@
+if page.tags
+  .tags
+    for tag in page.tags.toArray()
+      a(href=url_for(tag.path))= tag.name

@@ -1,0 +1,48 @@
+extends base
+- var current_title = page.title || tag.name || category.name || site.title
+
+block title
+  if config.subtitle
+    title= config.title + ' | ' + config.subtitle
+  else
+    title= config.title
+block content
+
+  for post in page.posts.toArray()
+    .post
+      h1.post-title
+        include _partial/helpers
+        a(href=url_for(post.path))
+          +title(post)
+      .post-meta= post.date.format(config.date_format)
+      if theme.duoshuo
+        a.ds-thread-count(data-thread-key=post.path, href=url_for(post.path) + '#comments')
+      if theme.disqus
+        a.disqus-comment-count(data-disqus-identifier=post.path, href=url_for(post.path) + '#disqus_thread')
+      if post.description
+        .post-content
+          != post.description
+      else if post.excerpt
+        .post-content
+          != post.excerpt
+      else if post.content
+        - var br = 0
+        - for (var i = 0; i < 5; ++i) {
+          - br = post.content.indexOf('\n',br+1)
+          if br<0
+            - break
+          if br >150
+            - break
+        - }
+        if br < 0
+          .post-content
+            != post.content
+        else
+          .post-content
+            != post.content.substring(0, br)
+      p(class='readmore')
+        a(href=url_for(post.path))= __('Readmore')
+
+  include _partial/paginator
+  if theme.disqus
+    script(id='dsq-count-scr', src='//#{theme.disqus}.disqus.com/count.js', async)

@@ -1,0 +1,4 @@
+.widget
+  .widget-title
+    i(class='fa fa-folder-o')= ' ' + __('categories')
+  != list_categories({show_count: theme.show_category_count})

@@ -1,0 +1,24 @@
+extends base
+
+block title
+  if page.category
+     title= page.category + ' | ' + config.title
+  if page.tag
+     title= page.tag + ' | ' + config.title
+  if page.archive
+     title= __('archive') + ' | ' + config.title
+block content
+  if page.category || page.tag
+      h1.label-title=  __('reading_label', page.category || page.tag)
+  .post
+    .post-archive
+        //Use lodash to classify posts. See https://lodash.com/docs#groupBy
+        each posts, year in _.groupBy(page.posts.toArray(), function(p){return -p.date.format('YYYY')})
+          h2= -year
+          ul.listing
+            for post in posts
+              li
+                span.date= post.date.format('YYYY/MM/DD')
+                a(href=url_for(post.path), title=post.title)
+                  +title(post)
+  include _partial/paginator.jade
