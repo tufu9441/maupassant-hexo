@@ -4,7 +4,6 @@ disqus: ## Your disqus_shortname, e.g. username
 uyan: ## Your uyan_id. e.g. 1234567
 gentie: 
 gentie_loader: 
-gentie_list: 
 google_search: true ## Use Google search, true/false.
 baidu_search: ## Use Baidu search, true/false.
 swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
