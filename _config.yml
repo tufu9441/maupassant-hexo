@@ -3,7 +3,6 @@ duoshuo: ## Your duoshuo_shortname, e.g. username
 disqus: ## Your disqus_shortname, e.g. username
 uyan: ## Your uyan_id. e.g. 1234567
 gentie: ## Your gentie, e.g. 8ca87ff79f474ba8a953baa3ca0d96a3
-gentie_loader: ## Your gentie_loader, e.g. aHR0cHM7Ly9hcGkuZ9VudGllLjE2My8jb20vZXh0ZW6kL2xpc3Rfam9pbl9zY3JpcHQuaHRtbA==
 google_search: true ## Use Google search, true/false.
 baidu_search: ## Use Baidu search, true/false.
 swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
