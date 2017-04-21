@@ -22,7 +22,7 @@ block content
       if theme.gentie
         a.ds-thread-count(class='cloud-tie-join-count', href=url_for(post.path) + '#comments')
           span.join-count(lang='join-count' style='margin: 0 3px 0 1px;' data-url='#{config.url}#{url_for(post.path)}') 0 
-          span Discuss
+          span= ' ' + __('Discuss')
       if post.description
         .post-content
           != post.description
@@ -56,4 +56,4 @@ block content
     script(src='//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js')
     script.
       var yunTieProductKey = '#{theme.gentie}';
-      Tie.loader('#{theme.gentie_loader}', true);
+      Tie.loader('aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vZXh0ZW5kL2xpc3Rfam9pbl9zY3JpcHQuaHRtbA==', true);

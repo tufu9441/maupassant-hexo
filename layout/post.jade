@@ -24,7 +24,7 @@ block content
     if theme.gentie
       a.ds-thread-count(class='cloud-tie-join-count', href=url_for(page.path) + '#comments')
         span.join-count(style='font-size: 15px; color: #6E7173;') 0
-        span Discuss
+        span= ' ' + __('Discuss')
     if page.toc
       div(class='clear')
         div(id='toc' class='toc-article')
