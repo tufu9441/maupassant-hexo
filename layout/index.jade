@@ -20,9 +20,9 @@ block content
       if theme.disqus
         a.disqus-comment-count(data-disqus-identifier=post.path, href=url_for(post.path) + '#disqus_thread')
       if theme.gentie
-        a.ds-thread-count(class="cloud-tie-join-count", href=url_for(post.path) + '#comments')
-          <span lang='join-count' class='join-count' data-url='#{config.url}#{url_for(post.path)}'>0</span>
-          <span>Discuss</span>
+        a.ds-thread-count(class='cloud-tie-join-count', href=url_for(post.path) + '#comments')
+          span.join-count(lang='join-count' style='margin: 0 3px 0 1px;' data-url='#{config.url}#{url_for(post.path)}') 0 
+          span Discuss
       if post.description
         .post-content
           != post.description
