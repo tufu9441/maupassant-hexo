@@ -19,14 +19,34 @@ html(lang='#{config.language}')
   include _partial/head
 
   body: .body_container
-    #header
-      .site-name
-        h1.hidden= current_title
-        a#logo(href=url_for('.'))= config.title
-        p.description= config.subtitle
-      #nav-menu
-        - for (var i in theme.menu)
-          +a_with_current(theme.menu[i].directory, __(theme.menu[i].page), theme.menu[i].icon)
+    if theme.make_maupassant_great_again
+      if page.title && page.title != '关于'
+        #header.hidden_on_post_page
+          .site-name
+            h1.hidden= current_title
+            a#logo(href=url_for('.'))= config.title
+            p.description= config.description
+          #nav-menu
+            - for (var i in theme.menu)
+              +a_with_current(theme.menu[i].directory, __(theme.menu[i].page), theme.menu[i].icon)
+      else
+        #header
+          .site-name
+            h1.hidden= current_title
+            a#logo(href=url_for('.'))= config.title
+            p.description= config.description
+          #nav-menu.hidden_on_small_screen
+            - for (var i in theme.menu)
+              +a_with_current(theme.menu[i].directory, __(theme.menu[i].page), theme.menu[i].icon)
+    else
+      #header
+        .site-name
+          h1.hidden= current_title
+          a#logo(href=url_for('.'))= config.title
+          p.description= config.description
+        #nav-menu
+          - for (var i in theme.menu)
+            +a_with_current(theme.menu[i].directory, __(theme.menu[i].page), theme.menu[i].icon)
 
     #layout.pure-g
       .pure-u-1.pure-u-md-3-4: .content_container
@@ -41,6 +61,9 @@ html(lang='#{config.language}')
             != partial('_widget/' + item + '.jade', null, {cache: !config.relative_link})
       .pure-u-1.pure-u-md-3-4
         != partial('_partial/footer.jade')
+
+    if theme.make_maupassant_great_again
+      include _partial/toggle_menu
 
     include _partial/totop
     include _partial/after_footer

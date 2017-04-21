@@ -15,6 +15,7 @@ toc_number: true ## If you want to add list number to toc please set the value t
 shareto: true ## If you want to use the share button please set the value to true.
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
 widgets_on_small_screens: false ## Set to true to enable widgets on small screens.
+make_maupassant_great_again: true ## Set to true to enable better experience on mobile devices.
 
 menu:
   - page: home

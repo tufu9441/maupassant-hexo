@@ -1,0 +1,10 @@
+#floating_container
+	a.toggle_menu.home(href='/')
+	a.toggle_menu.archives(href='/archives')
+	a.toggle_menu.about(href='/about')
+	a.toggle_menu.rss(href='/atom.xml')
+	#floating_button
+		.menu
+		.close
+
+script(type='text/javascript', src=url_for(theme.js) + '/toggle_menu.js' + '?v=' + theme.version, async)

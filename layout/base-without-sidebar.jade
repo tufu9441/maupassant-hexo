@@ -23,7 +23,7 @@ html(lang='#{config.language}')
       .site-name
         h1.hidden= current_title
         a#logo(href=url_for('.'))= config.title
-        p.description= config.subtitle
+        p.description= config.description
       #nav-menu
         - for (var i in theme.menu)
           +a_with_current(theme.menu[i].directory, __(theme.menu[i].page), theme.menu[i].icon)
