@@ -6,7 +6,8 @@
 
 [Preview](https://yuchengzhixia.com)|[中文文档](https://yuchengzhixia.com/Make-maupassant-great-again/)
 
-A simple Hexo template with great performance on different devices, ported from a Typecho theme by [Cho](https://github.com/pagecho/maupassant/), forked and modified from [tutu9441](https://github.com/tufu9441/maupassant-hexo).
+A simple Hexo template with great performance on different devices, ported from a Typecho theme by [Cho](https://github.com/pagecho/maupassant/), forked and modified from [icylogic](https://github.com/icylogic/maupassant-hexo),now maintained by [tufu9441](https://github.com/tufu9441/maupassant-hexo).
+![Preview](https://raw.githubusercontent.com/DonQvixote/Itachi/master/preview.png)
 
 ## Installation
 Install theme and renderers:
