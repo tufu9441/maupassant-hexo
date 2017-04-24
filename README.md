@@ -1,21 +1,19 @@
 # Maupassant
 
-[![Build Status](https://travis-ci.org/tufu9441/maupassant-hexo.svg?branch=master)](https://travis-ci.org/tufu9441/maupassant-hexo)   [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tufu9441/maupassant-hexo/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/tufu9441/maupassant-hexo.svg?branch=master)](https://travis-ci.org/tufu9441/maupassant-hexo)   [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/DonQvixote/maupassant-hexo/blob/master/LICENSE)
 
 > 大道至简
 
-[Preview](https://www.haomwei.com)｜[中文文档](https://www.haomwei.com/technology/maupassant-hexo.html)
+[Preview](https://yuchengzhixia.com)|[中文文档](https://yuchengzhixia.com/Make-maupassant-great-again/)
 
-A simple Hexo template with great performance on different devices, ported from a Typecho theme by [Cho](https://github.com/pagecho/maupassant/), forked and modified from [icylogic](https://github.com/icylogic/maupassant-hexo/).
-
-![template preview](http://ooo.0o0.ooo/2015/10/24/562b5be12177e.jpg
- "Maupassant template preview")
+A simple Hexo template with great performance on different devices, ported from a Typecho theme by [Cho](https://github.com/pagecho/maupassant/), forked and modified from [icylogic](https://github.com/icylogic/maupassant-hexo),now maintained by [tufu9441](https://github.com/tufu9441/maupassant-hexo).
+![Preview](https://raw.githubusercontent.com/DonQvixote/Itachi/master/preview.png)
 
 ## Installation
 Install theme and renderers:
 
 ```shell
-$ git clone https://github.com/tufu9441/maupassant-hexo.git themes/maupassant
+$ git clone https://github.com/DonQvixote/maupassant-hexo.git themes/maupassant
 $ npm install hexo-renderer-jade --save
 $ npm install hexo-renderer-sass --save
 ```
@@ -43,6 +41,7 @@ toc_number: true ## If you want to add list number to toc please set the value t
 shareto: true ## If you want to use the share button please set the value to true.
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
 widgets_on_small_screens: false ## Set to true to enable widgets on small screens.
+make_maupassant_great_again: true ## Set to true to enable better experience on mobile devices.
 
 menu:
   - page: home
@@ -108,6 +107,7 @@ version: 0.0.0
 - shareto - Enable share button
 - busuanzi - Enable [Busuanzi](http://busuanzi.ibruce.info) page views
 - widgets_on_small_screens - Show the widgets at the bottom of small screens.
+- make_maupassant_great_again - Show a toggle menu to navigate on mobile devices，and some features on blog header too.
 - menu - Customize your menu of pages here, just follow the format of existied items. Don't forget to create corresponding folders inlcuding `index.md` in `source` folder to ensure the pages will correctly display. [FontAwesome](http://fontawesome.io) icon fonts have been integrated, and you can choose other icons which you like [here](http://fontawesome.io/icons/) and use them according to the instruction.
 - widgets - Choose and arrange the widgets in sidebar here.
 - links - Edit your blogroll here.
@@ -179,7 +179,7 @@ Seven languages are available for this theme currently: Simplified Chinese (zh-C
 ## Solutions
 - Check whether your Terminal's current directory is in hexo's root directory which contains `source/`, `themes/`, etc.
 
-- If you have any trouble in using this theme, please feel free to open an [issue](https://github.com/tufu9441/maupassant-hexo/issues).
+- If you have any trouble in using this theme, please feel free to open an [issue](https://github.com/DonQvixote/maupassant-hexo/issues).
 
 ## Browser Support
 ![Imgur](http://i.imgur.com/iO9L5ty.png)
@@ -190,11 +190,12 @@ All kinds of contributions (enhancements, new features, documentation & code imp
 Looking forward to your pull request.
 
 ## Acknowledgements
-Thank [JamesPan](http://blog.jamespan.me) for his help to improve this theme
-.
+Thanks for all the [contributors](https://github.com/DonQvixote/maupassant-hexo/graphs/contributors) of this theme.
 ## Maupassant on other platforms:
 + Typecho：https://github.com/pagecho/maupassant/
 + Octopress：https://github.com/pagecho/mewpassant/
 + Farbox：https://github.com/pagecho/Maupassant-farbox/
 + Wordpress：https://github.com/iMuFeng/maupassant/
 + Ghost: https://github.com/LjxPrime/maupassant/
+
+
