@@ -4,7 +4,11 @@ head
     meta(content='yes', name='apple-mobile-web-app-capable')
     meta(content='black-translucent', name='apple-mobile-web-app-status-bar-style')
     meta(content='telephone=no', name='format-detection')
-    meta(name='description', content=config.description)
+    meta(http-equiv='Cache-Control' content='no-transform')
+    meta(http-equiv='Cache-Control' content='no-siteapp')
+    unless page.tags
+      meta(name='keywords' content=config.keywords)
+    != open_graph({})
     block title
     link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/style.css' + '?v=' + theme.version)
     link(rel='stylesheet', type='text/css', href='//cdn.bootcss.com/normalize/6.0.0/normalize.min.css')
