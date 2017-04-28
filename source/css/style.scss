@@ -1810,7 +1810,15 @@ table {
   }
   &:hover {
     background: #38ad5a;
+    &~ .wechat-qrcode {
+      display: block;
+      text-align: center;
+    }
   }
+}
+
+.wechat-qrcode {
+  display: none;
 }
 
 /* search result*/
@@ -1830,4 +1838,31 @@ em.search-keyword {
   font-weight: bold;
   font-style: normal;
   color: #01579f;
+}
+
+/* Disqus Button */
+.disqus_click_btn {
+  line-height: 30px;
+  margin: 0;
+  min-width: 50px;
+  padding: 0 14px;
+  display: inline-block;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  overflow: hidden;
+  will-change: box-shadow;
+  transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+  outline: 0;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  border: 0;
+  background: rgba(158, 158, 158, .2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  color: #fff;
+  background-color: #999999;
+  text-shadow: 0
 }
