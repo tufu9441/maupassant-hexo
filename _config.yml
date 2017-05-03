@@ -9,7 +9,7 @@ swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
 tinysou: ## Your tinysou_key, e.g. 4ac092ad8d749fdc6293
 self_search: true ## Use a jQuery-based local search engine, true/false.
 google_analytics: UA-94086924-1 ## Your Google Analytics tracking id, e.g. UA-42425684-2
-baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
+baidu_analytics: b6ade03fffe09a6efb7e3adaf21259fb ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 show_category_count: true ## If you want to show the count of categories in the sidebar widget please set the value to true.
 toc_number: true ## If you want to add list number to toc please set the value to true.
 shareto: true ## If you want to use the share button please set the value to true.
