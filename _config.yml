@@ -33,7 +33,7 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
   - tag
   - recent_posts
   ##- recent_comments
-  - links
+  ##- links
 
 links:
   - title: vpnfree 免费ss分享
