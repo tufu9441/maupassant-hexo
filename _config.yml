@@ -5,6 +5,7 @@ uyan: ## Your uyan_id. e.g. 1234567
 gentie: ## Your gentie_productKey, e.g. fc799538c7ad4cf5a5a0c2877a90cbd7
 changyan: ## Your changyan appid
 changyan_conf: ## You changyan conf
+cahngyan_donate: ##use changyan donate
 google_search: true ## Use Google search, true/false.
 baidu_search: ## Use Baidu search, true/false.
 swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
