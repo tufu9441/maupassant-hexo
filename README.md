@@ -195,7 +195,7 @@ mathjax2: true
 in Hexo's `_config.yml` instead of `mathjax: true`. Correspondingly, add `mathjax2: true` to the `front-matter` of the post in which
 you would like to use math equation.
 
-See the [example](http://zhongpu.info/2016/05/06/Mathjax%20and%20Hexo/).
+See the [example](http://blog.zhongpu.info/2016/05/06/Mathjax%20and%20Hexo/).
 
 #### Languages
 Seven languages are available for this theme currently: Simplified Chinese (zh-CN), Traditional Chinese (zh-TW), English (en), French (fr-FR), German (de-DE), Korean (ko) and Spanish (es-ES). Contributions of translating to other languages will be highly appreciated.
