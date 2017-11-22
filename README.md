@@ -38,7 +38,6 @@ google_analytics: ## Your Google Analytics tracking id, e.g. UA-42425684-2
 baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 shareto: true ## If you want to use the share button please set the value to true.
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
-amazon_id: # Your Aamzon AD id, e.g. zhongpublog-23
 
 menu:
   - page: home
