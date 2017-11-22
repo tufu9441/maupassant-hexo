@@ -6,7 +6,7 @@ tags: 标签
 archive: 归档
 links: 链接
 about: 关于
-recent: 最新文章
+recent: 最近文章
 next: 下一页
 previous: 上一页
 notitle: 无题
@@ -16,7 +16,10 @@ rss: 订阅
 guestbook: 留言
 home: 首页
 recent_comments: 最近评论
-Readmore: 阅读更多
+Readmore: 阅读全文
 belongsto: 分类于
 contents: 文章目录
-shareto: 分享到
+shareto: 分享
+Discuss: 条参与
+Comment: 条评论
+Hits: 阅读
