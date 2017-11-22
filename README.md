@@ -133,7 +133,6 @@ version: 0.0.0
 - [canvas_nest](https://github.com/hustcc/canvas-nest.js) - Enable dynamic background
 - donate - Enable donate button after each post
 - menu - Customize your menu of pages here, just follow the format of existied items. Don't forget to create corresponding folders inlcuding `index.md` in `source` folder to ensure the pages will correctly display. [FontAwesome](http://fontawesome.io) icon fonts have been integrated, and you can choose other icons which you like [here](http://fontawesome.io/icons/) and use them according to the instruction.
->>>>>>> upstream/master
 - widgets - Choose and arrange the widgets in sidebar here.
 - links - Edit your blogroll here.
 - timeline - Show a timeline of the website by setting `layout: timeline` of a page.
