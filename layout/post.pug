@@ -1,0 +1,48 @@
+extends base
+
+block title
+  title= page.title + ' | ' + config.title
+
+block content
+  .post
+    h1.post-title= page.title
+    .post-meta= page.date.format('ll')
+      if page.categories.length > 0
+        span= ' | '
+        span.category
+          for category in page.categories.toArray()
+            a(href=url_for(category.path))= category.name
+      if theme.busuanzi == true
+        script(src='https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js', async)
+        span#busuanzi_container_page_pv= ' | '
+          span#busuanzi_value_page_pv
+          span= ' ' + __('Hits')
+    if theme.disqus
+      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
+    if theme.changyan
+      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
+        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
+        span= ' ' + __('Comment')
+      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
+    if theme.valine.enable
+      a.disqus-comment-count( href=url_for(page.path) + '#vcomment')
+        span.valine-comment-count(data-xid=url_for(page.path))
+        span 条评论
+    if page.toc
+      div(class='clear')
+        div(id='toc' class='toc-article')
+          div(class='toc-title')= __('contents')
+          != toc(page.content, {list_number: theme.toc_number})
+    .post-content
+      != page.content
+    if theme.donate.enable == true
+      iframe(src='/donate/?AliPayQR=' + theme.donate.alipay_qr + '&WeChatQR=' + theme.donate.wechat_qr + '&GitHub=' + theme.donate.github + '&BTCQR=' + theme.donate.btc_qr + '&BTCKEY='+ theme.donate.btc_key + '&PayPal=' + theme.donate.paypal_url, style='overflow-x:hidden; overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;', frameborder='0', scrolling='no')
+    if theme.shareto == true
+      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
+      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
+
+    include _partial/tag.pug
+    include _partial/post_nav.pug
+
+    if page.comments
+      include _partial/comments.pug

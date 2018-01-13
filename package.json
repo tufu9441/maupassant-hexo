@@ -13,7 +13,7 @@
     "hexo-generator-index": "^0.1.0",
     "hexo-generator-tag": "^0.1.0",
     "hexo-renderer-ejs": "^0.1.0",
-    "hexo-renderer-jade": "^0.1.0",
+    "hexo-renderer-pug": "^0.0.5",
     "hexo-renderer-marked": "^0.2.4",
     "hexo-renderer-sass": "^0.1.2",
     "hexo-renderer-stylus": "^0.2.3",

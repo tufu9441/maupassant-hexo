@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>Donate-Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" /><!--禁止缩放-->
+	<link rel="stylesheet" href="../css/donate.css">
+	<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="//cdn.bootcss.com/clipboard.js/1.7.1/clipboard.min.js"></script>
+	<!-- clipboard.js 是 JS 复制文本的库 -->
+	<script src="../js/donate.js"></script>
+</head>
+<body>
+	<a id="github" href="https://github.com/Kaiyuan/donate-page" target="_blank" class="pos-f tr3" title="Github"></a>
+	<div id="DonateText" class="tr3">Donate</div>
+	<ul id="donateBox" class="list pos-f tr3">
+		<li id="PayPal"><a href="" target="_blank">PayPal</a></li>
+		<li id="BTC" data-footnote="Copy addres and show QRCod"><button id="BTCBn"  data-clipboard-target="#btc-key" alt="Copy to clipboard">Bitcoin</button></li>
+		<li id="AliPay">AliPay</li>
+		<li id="WeChat">WeChat</li>
+	</ul>
+	<div id="QRBox" class="pos-f left-100">
+		<div id="MainBox"></div>
+	</div>
+	<!-- Bitcoin 账号 -->
+	<input id="btc-key" type="text" value="" readonly="readonly">
+</body>
+</html>

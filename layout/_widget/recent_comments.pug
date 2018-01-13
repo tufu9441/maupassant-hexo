@@ -1,0 +1,5 @@
+if theme.disqus
+  .widget
+    .widget-title
+      i(class='fa fa-comment-o')= ' ' + __('recent_comments')
+    script(type='text/javascript', src='//' + theme.disqus + '.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=1&avatar_size=32&excerpt_length=20&hide_mods=1')

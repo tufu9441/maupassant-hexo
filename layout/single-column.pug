@@ -1,4 +1,4 @@
-extends base
+extends base-without-sidebar
 block title
   title= page.title + ' | ' + config.title
 block content
@@ -7,5 +7,4 @@ block content
     .post-content
       != page.content
   if page.comments
-    include _partial/comments
-
+    include _partial/comments.pug
