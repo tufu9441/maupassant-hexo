@@ -66,6 +66,7 @@ baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 show_category_count: false ## If you want to show the count of categories in the sidebar widget please set the value to true.
 toc_number: true ## If you want to add list number to toc please set the value to true.
 shareto: false ## If you want to use the share button please set the value to true, you must have hexo-helper-qrcode installed.
+widgets_on_small_screens: false ## Set to true to enable widgets on small screens.
 busuanzi:
   enable: false ## If you want to use Busuanzi please set the value to true.
   page_pv: true ## If you want to use Busuanzi single page views please set the value to true.
