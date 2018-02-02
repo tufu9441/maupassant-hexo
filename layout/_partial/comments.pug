@@ -13,6 +13,21 @@ if theme.gitment.enable == true
       })
       gitment.render('container')
 
+if theme.gitalk.enable == true
+    #container
+    link(rel='stylesheet', type='text/css', href='//unpkg.com/gitalk/dist/gitalk.css?v=' + theme.version)
+    script(type='text/javascript' src='//unpkg.com/gitalk/dist/gitalk.min.js?v=' + theme.version)
+    script.
+      var gitalk = new Gitalk({
+        clientID: '#{theme.gitalk.client_id}',
+        clientSecret: '#{theme.gitalk.client_secret}',
+        repo: '#{theme.gitalk.repo}',
+        owner: '#{theme.gitalk.owner}',
+        admin: ['#{theme.gitalk.admin}'],
+        distractionFreeMode: false
+      })
+      gitalk.render('container')
+      
 if theme.disqus
   #disqus_thread
     .btn_click_load
