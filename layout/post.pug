@@ -12,11 +12,15 @@ block content
         span.category
           for category in page.categories.toArray()
             a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js', async)
+      if theme.busuanzi.enable == true && theme.busuanzi.page_pv == true && theme.leancloud.enable == false
         span#busuanzi_container_page_pv= ' | '
           span#busuanzi_value_page_pv
           span= ' ' + __('Hits')
+      if theme.leancloud.enable == true
+        span= ' | '
+          span(id='/' + page.path data-flag-title=page.title).leancloud-post.leancloud-visitor.counter
+            span.leancloud-count
+            span= ' ' + __('Hits')
     if theme.disqus
       a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
     if theme.changyan
@@ -27,7 +31,7 @@ block content
     if theme.valine.enable
       a.disqus-comment-count( href=url_for(page.path) + '#vcomment')
         span.valine-comment-count(data-xid=url_for(page.path))
-        span 条评论
+        span = ' ' + __('Comment')
     if page.toc
       div(class='clear')
         div(id='toc' class='toc-article')

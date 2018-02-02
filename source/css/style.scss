@@ -218,6 +218,16 @@ div {
               padding-right: 0.3em;
             }
         }
+        .counter {
+            &:before {
+              font-family: "FontAwesome";
+              content: "\f024";
+              padding-right: 0.3em;
+            }
+        }
+        .leancloud-count{
+            padding-right: 0.3em;
+        }
         #busuanzi_value_page_pv {
             &:before {
               font-family: "FontAwesome";
@@ -407,6 +417,7 @@ div {
     text-align: center;
     span {
         font-size: .9em;
+        padding: .3em;
     }
 }
 

@@ -14,6 +14,11 @@ block content
         a(href=url_for(post.path))
           +title(post)
       .post-meta= post.date.format(config.date_format)
+        if theme.leancloud.enable == true
+          span= ' | '
+            span(id='/' + post.path data-flag-title=post.title).leancloud-visitor.counter
+              span.leancloud-count
+              span= ' ' + __('Hits')
       if theme.disqus
         a.disqus-comment-count(data-disqus-identifier=post.path, href=url_for(post.path) + '#disqus_thread')
       if theme.changyan

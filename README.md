@@ -34,6 +34,13 @@ gitment:
   repo: ## The repository to store your comments, make sure you're the repo's owner, e.g. imsun.github.io
   client_id: ## GitHub client ID, e.g. 75752dafe7907a897619
   client_secret: ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
+gitalk:
+  enable: false ## If you want to use Gitment comment system please set the value to true.
+  owner:  ## Your GitHub ID, e.g. username
+  repo:  ## The repository to store your comments, make sure you're the repo's owner, e.g. imsun.github.io
+  client_id:  ## GitHub client ID, e.g. 75752dafe7907a897619
+  client_secret:  ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
+  admin:  ## Github repo owner and collaborators, only these guys can initialize github issues'
 uyan: ## Your uyan_id. e.g. 1234567
 livere: ## Your livere data-uid, e.g. MTAyMC8zMDAxOC78NTgz
 changyan: ## Your changyan appid, e.g. cyrALsXc8
@@ -59,8 +66,15 @@ baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 show_category_count: false ## If you want to show the count of categories in the sidebar widget please set the value to true.
 toc_number: true ## If you want to add list number to toc please set the value to true.
 shareto: false ## If you want to use the share button please set the value to true, you must have hexo-helper-qrcode installed.
-busuanzi: false ## If you want to use Busuanzi page views please set the value to true.
-widgets_on_small_screens: false ## Set to true to enable widgets on small screens.
+busuanzi:
+  enable: false ## If you want to use Busuanzi please set the value to true.
+  page_pv: true ## If you want to use Busuanzi single page views please set the value to true.
+  site_pv: true ## If you want to use Busuanzi site total views please set the value to true.
+  site_uv: true ## If you want to use Busuanzi site unique views please set the value to true.
+leancloud:
+  enable: false ## If you want to use leancloud page views please set the value to true.
+  appid:  ## Your LeanCloud application App ID, e.g. pRBBL2JR4N7kLEGojrF0MsSs-gzGzoHsz
+  appkey:  ## Your LeanCloud application App Key, e.g. tjczHpDfhjYDSYddzymYK1JJwidgets_on_small_screens: false ## Set to true to enable widgets on small screens.
 canvas_nest:
   enable: false ## If you want to use dynamic background please set the value to true, you can also fill the following parameters to customize the dynamic effect, or just leave them blank to keep the default effect.
   color: ## RGB value of the color, e.g. "100,99,98"
@@ -126,6 +140,7 @@ version: 0.0.0
 - fancybox - Enable [Fancybox](http://fancyapps.com/fancybox/)
 - disqus - [Disqus](https://disqus.com) shortname
 - gitment - [Gitment](https://github.com/imsun/gitment) comment system
+- gitalk - [Gitalk](https://github.com/gitalk/gitalk) issue comment system
 - uyan - [Uyan](http://www.uyan.cc) id
 - livere - [LiveRe](https://livere.com) data-uid
 - changyan - [Changyan](http://changyan.kuaizhan.com) appid
@@ -141,6 +156,7 @@ version: 0.0.0
 - toc_number - Show the list number of toc
 - shareto - Enable share button, with the dependency on the plugin [hexo-helper-qrcode](https://github.com/yscoder/hexo-helper-qrcode)
 - busuanzi - Enable [Busuanzi](http://busuanzi.ibruce.info) page views
+- leancloud - Enable [LeanCloud](https://leancloud.cn/) page views
 - widgets_on_small_screens - Show the widgets at the bottom of small screens
 - [canvas_nest](https://github.com/hustcc/canvas-nest.js) - Enable dynamic background
 - donate - Enable donate button after each post

@@ -5,3 +5,24 @@
   a(rel='nofollow', target='_blank', href='https://github.com/tufu9441/maupassant-hexo')  Theme
   |  by
   a(rel='nofollow', target='_blank', href='https://github.com/pagecho')  Cho.
+  if theme.busuanzi.enable == true
+    script(src='https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js', async)
+    if theme.busuanzi.site_pv == true
+      span#busuanzi_container_site_pv= ' | ' + __('page_views')
+        span#busuanzi_value_site_pv
+    if theme.busuanzi.site_uv == true
+      span#busuanzi_container_site_uv= ' | ' + __('visitors')
+        span#busuanzi_value_site_uv
+  if theme.leancloud.enable == true
+    script(src='https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js')
+    script(type='text/javascript', src=url_for(theme.js) + '/leancloud.js' + '?v=' + theme.version)
+    script.
+      AV.initialize('#{theme.leancloud.appid}', '#{theme.leancloud.appkey}')
+      $(function() {
+          var Counter = AV.Object.extend("Counter");
+          if ($('.leancloud-post').length > 0) {
+              addCount(Counter);
+          } else if ($('.leancloud-visitor').length > 0) {
+              showTime(Counter);
+          }
+      });
