@@ -20,6 +20,7 @@ block content
         a.ds-thread-count(href=url_for(post.path) + '#SOHUCS')
           span.cy_cmt_count(id='sourceId::' + post.date.valueOf() style='margin: 0 3px 0 1px;') 0
           span= ' ' + __('Comment')
+      - var fullcontent = false
       if post.description
         .post-content
           != post.description
@@ -38,11 +39,13 @@ block content
         if br < 0
           .post-content
             != post.content
+          - fullcontent = true
         else
           .post-content
             != post.content.substring(0, br)
-      p(class='readmore')
-        a(href=url_for(post.path))= __('Readmore')
+      if !fullcontent
+        p(class='readmore')
+          a(href=url_for(post.path))= __('Readmore')
 
   include _partial/paginator.pug
   if theme.disqus
