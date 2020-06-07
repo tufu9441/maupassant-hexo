@@ -1,0 +1,52 @@
+-
+  var minivaline_js = 'https://cdn.jsdelivr.net/npm/minivaline@2/dist/MiniValine.min.js';
+  var emoticonUrl="["
+  for(i in theme.minivaline.emoticonUrl){
+    var it= "'" + theme.minivaline.emoticonUrl[i] + "',"
+    emoticonUrl+=it
+  }
+  emoticonUrl+="]"
+  var tagMeta="["
+  for(i in theme.minivaline.tagMeta){
+    var it= "'" + theme.minivaline.tagMeta[i] + "',"
+    tagMeta+=it
+  }
+  tagMeta+="]"
+  var master="["
+  for(i in theme.minivaline.master){
+    var it= "'" + theme.minivaline.master[i] + "',"
+    master+=it
+  }
+  master+="]"
+  var friends="["
+  for(i in theme.minivaline.friends){
+    var it= "'" + theme.minivaline.friends[i] + "',"
+    friends+=it
+  }
+  friends+="]"
+
+script(src=minivaline_js)
+
+script.
+    new MiniValine({
+      el: '#minivaline-container',
+      appId: '!{ theme.minivaline.appid }',
+      appKey: '!{ theme.minivaline.appkey }',
+      mode: '!{ theme.minivaline.mode }',
+      placeholder: '!{ theme.minivaline.placeholder }',
+      pathname: window.location.pathname,
+      lang: '!{ theme.minivaline.lang }',
+      adminEmailMd5: '!{ theme.minivaline.adminEmailMd5 }',
+      tagMeta: !{ tagMeta },
+      master: !{ master },
+      friends: !{ friends },
+      math: !{ theme.minivaline.math },
+      md: !{ theme.minivaline.md },
+      enableQQ: !{ theme.minivaline.enableQQ },
+      NoRecordIP: !{ theme.minivaline.NoRecordIP },
+      visitor: !{ theme.minivaline.visitor },
+      maxNest: !{ theme.minivaline.maxNest },
+      pageSize: !{ theme.minivaline.pageSize },
+      serverURLs: '!{ theme.minivaline.serverURLs }',
+      emoticonUrl: !{ emoticonUrl },
+    });
