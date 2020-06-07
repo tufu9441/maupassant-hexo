@@ -119,4 +119,11 @@ if theme.valine.enable == true
 
 if theme.minivaline.enable == true
     #minivaline-container
-    include ./minivaline.pug
+    -
+      var minivaline_js = 'https://cdn.jsdelivr.net/npm/minivaline@2/dist/MiniValine.min.js';
+      var minivalineConfig = JSON.stringify(theme.minivaline)
+    script(src=minivaline_js)
+    script.
+      const minivalineConfig = !{minivalineConfig}
+      minivalineConfig.el = "#minivaline-container"
+      new MiniValine(minivalineConfig);

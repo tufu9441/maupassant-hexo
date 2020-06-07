@@ -24,8 +24,8 @@ valine: ## https://valine.js.org
 # See: https://github.com/MiniValine/MiniValine
 minivaline:
   enable: false
-  appid: zhM0AOiqle17oPoE84CoYw1e-gzGzoHsz # Your leancloud application appid
-  appkey: itmzT1JbXfAjVwMqDhGPzU45 # Your leancloud application appkey
+  appId: zhM0AOiqle17oPoE84CoYw1e-gzGzoHsz # Your leancloud application appId 这里必须是大写I
+  appKey: itmzT1JbXfAjVwMqDhGPzU45 # Your leancloud application appKey 这里必须是大写K
   mode: DesertsP # DesertsP or xCss
   placeholder: Write a Comment # Comment box placeholder
   math: true # Support MathJax.
