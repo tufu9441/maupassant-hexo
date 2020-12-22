@@ -73,6 +73,7 @@ plantuml: ## Using PlantUML to generate UML diagram, must install hexo-filter-pl
     outputFormat: "svg" ## Common options: svg/png
 copycode: true ## If you want to enable one-click copy of the code blocks, set the value to true.
 dark: false ## If you want to use the dark mode theme, set the value to true. Note: This feature is not complete, please open an issue if you have any problem.
+totop: true ## If you want the to-top rocketship, set the value to true.
 
 menu:
   - page: home

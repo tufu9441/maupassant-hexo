@@ -34,5 +34,6 @@ html(lang=config.language)
       .pure-u-1.pure-u-md-4-4
         != partial('_partial/footer.pug')
 
-    include _partial/totop.pug
+    if config.totop
+      include _partial/totop.pug
     include _partial/after_footer.pug
