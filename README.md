@@ -112,6 +112,7 @@ copycode: true ## If you want to enable one-click copy of the code blocks, set t
 dark: false ## If you want to use the dark mode theme, set the value to true. Note: This feature is not complete, please open an issue if you have any problem.
 totop: true ## If you want to use the rocketship button to return to the top, set the value to true.
 external_css: false ## If you want to load an external CSS file, set the value to true and create a file named "external.css" in the source/css folder.
+mastodon_verification: ## Put your Mastodon profile link here to get verified, check https://docs.joinmastodon.org/user/profile/#verification
 
 menu:
   - page: home
