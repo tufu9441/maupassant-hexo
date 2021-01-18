@@ -142,6 +142,8 @@ links:
     url: http://www.example2.com/
   - title: site-name3
     url: http://www.example3.com/
+    attributes: # Add your additional attributes to the link here
+      rel: me
 
 timeline:
   - num: 1
