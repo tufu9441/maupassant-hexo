@@ -5,3 +5,19 @@
   a(rel='nofollow', target='_blank', href='https://github.com/tufu9441/maupassant-hexo')  Theme
   |  by
   a(rel='nofollow', target='_blank', href='https://github.com/pagecho')  Cho.
+  if theme.busuanzi
+    script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
+  div()
+    each v, i in theme.badges
+      - var type = ''
+      if v.type == 'pv' || v.type == 'uv'
+        - type = v.type
+      div(class="github-badge")
+        a(href=v.url, target='_black', rel='nofollow', title=v.title)
+          span(class='badge-subject') !{v.lable ? v.lable : '&nbsp;'}
+          span(class='badge-value bg-'+ (v.color ? v.color : 'brightgreen'), id = type ? `busuanzi_value_site_${type}` : false)
+            if v.logo
+              != `<img src=${v.logo} />`
+            |!{v.message || v.logo ? v.message : '&nbsp;'}
+      |
+      |
