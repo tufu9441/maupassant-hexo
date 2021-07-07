@@ -103,6 +103,7 @@ menu:
   - page: rss
     directory: atom.xml
     icon: fa-rss
+    target: _blank
 
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, recent_comments and links.
   - search
