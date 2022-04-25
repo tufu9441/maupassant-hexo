@@ -47,3 +47,12 @@ if page.mathjax2
 
 script(type='text/javascript', src=url_for(theme.js) + '/codeblock-resizer.js' + '?v=' + theme.version)
 script(type='text/javascript', src=url_for(theme.js) + '/smartresize.js' + '?v=' + theme.version)
+
+//- google-code-prettify
+script(type='text/javascript' src=url_for(theme.js) + '/prettify.js' + '?v=' + theme.version)
+script.
+  $(document).ready(function(){
+  $('pre').addClass('prettyprint');
+  $('code').addClass('prettyprint');
+  prettyPrint();
+  })
