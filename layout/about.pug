@@ -1,0 +1,82 @@
+include _partial/helpers.pug
+
+if page.title
+  - var current_title = page.title
+else
+  - var current_title = config.title
+
+if config.feed
+  case config.feed.type
+    when 'rss2'
+      - var feed_type='application/rss+xml'
+    when 'atom'
+    default
+      - var feed_type='application/atom+xml'
+
+doctype html
+html(lang=config.language)
+  include _partial/head.pug
+  body: .body_container
+    #header
+      .site-name
+        h1.hidden= current_title
+        a#logo(href=url_for('.'))= config.title
+        p.description= config.subtitle
+      #nav-menu
+        - for (var i in theme.menu)
+          +a_with_current(theme.menu[i].directory, __(theme.menu[i].page), theme.menu[i].icon)
+
+    #layout.pure-g
+      .pure-u-1.pure-u-md-3-4: .content_container
+        block content
+        //-   about页面的主内容写在这里
+        h2  🎉 关于我 🎉
+        | #{theme.aboutinfo.mydesc}
+          
+        ul.link-items
+          - for (var i in theme.mylinks)
+              li.link-item
+                  a.link-url(target='_blank', href=theme.mylinks[i].url)
+                    .link-left
+                      img.link-avatar(src=theme.mylinks[i].src title=theme.mylinks[i].name)
+                    .link-info
+                      .link-blog #{theme.mylinks[i].title}
+                      .link-desc #{theme.mylinks[i].dec}
+        h2  ✨ 友情链接 ✨
+        | #{theme.aboutinfo.otherdesc}
+        ul.link-items
+          - for (var i in theme.links)
+              li.link-item
+                  a.link-url(target='_blank', href=theme.links[i].url)
+                    .link-left
+                      img.link-avatar(src=theme.links[i].src title=theme.links[i].name)
+                    .link-info
+                      .link-blog #{theme.links[i].title}
+                      .link-desc #{theme.links[i].dec}
+        h2  🎈 致谢 🎈
+        p
+          span!= __(theme.thanks)
+        .custom-container.tip
+          p.custom-container-title 友链内容
+          p!= __(theme.mysite)
+
+ 
+      if theme.widgets_on_small_screens
+        .pure-u-1.pure-u-md-1-4: #sidebar
+          each item in theme.widgets
+            != partial('_widget/' + item + '.pug', null, {cache: !config.relative_link})
+      else
+        .pure-u-1-4.hidden_mid_and_down: #sidebar
+          each item in theme.widgets
+            != partial('_widget/' + item + '.pug', null, {cache: !config.relative_link})
+      .pure-u-1.pure-u-md-3-4
+        if page.donate
+            include _widget/donate.pug
+        if page.comments
+            include _partial/comments.pug
+        != partial('_partial/footer.pug')
+
+    if theme.totop == true
+      include _partial/totop.pug
+    
+    include _partial/after_footer.pug

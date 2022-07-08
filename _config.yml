@@ -136,13 +136,36 @@ widgetinfo:
       outlink: atom.xml
       message: xxx Blog的rss
 
+# about layout
+aboutinfo:
+  mydesc: 这是关于说明
+  otherdesc: 这是友链说明
+  thanks: 本博客修改自hexo框架下  <a href="https://github.com/tufu9441/maupassant-hexo" rel="external nofollow" target="_blank">Maupassant</a>  主题，感谢开源。
+  mysite: -&nbsp name:&nbsp My Blog <br/> &nbsp &nbsp link:&nbsp http://www.example1.com/ <br/> &nbsp &nbsp avatar:&nbsp http://www.example1.com/  <br/> &nbsp &nbsp descr:&nbsp 一以贯之的努力，不得懈怠的人生。
+
+mylinks:
+  - title: site-name1
+    name: site-name1
+    url: http://www.example1.com/
+    src: # avatar link
+    dec: site-name1,site-name1
+  - title: site-name1
+    name: site-name1
+    url: http://www.example1.com/
+    src:
+    dec: site-name1,site-name1
+
 links:
   - title: site-name1
+    name: site-name1
     url: http://www.example1.com/
-  - title: site-name2
-    url: http://www.example2.com/
-  - title: site-name3
-    url: http://www.example3.com/
+    src: # avatar link
+    dec: site-name1,site-name1
+  - title: site-name1
+    name: site-name1
+    url: http://www.example1.com/
+    src:
+    dec: site-name1,site-name1
 
 timeline:
   - num: 1

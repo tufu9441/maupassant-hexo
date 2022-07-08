@@ -1969,3 +1969,93 @@ html[data-dark='true'] {
     justify-content: center;
     align-items: center;
 }
+
+/* about link layout*/
+.link-items {
+    display: flex;
+    text-align: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    padding: 0px 0.5rem;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 20px;
+
+    .link-item {
+        display: inline-flex;
+        --primary-color: #444;
+        .link-url {
+            display: inline-flex;
+            text-align: center;
+            justify-self: center;
+            line-height: 1.5;
+            width: 15rem;
+            color: var(--primary-color,#000);
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            transition: all 0.2s ease 0s;
+            // border: 1px solid var(--primary-color,grey);
+
+            .link-left {
+                display: inline-block;
+                line-height: 0;
+
+                .link-avatar {
+                    width: 4rem;
+                    height: 4rem;
+                    background-color: rgb(255, 255, 255);
+                    border-radius: 50%;
+                    // border: 1px solid var(--primary-color,grey);
+                    transition: all 0.5s ease 0s;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+                }
+            }
+            .link-info {
+                padding-left: 0.6rem;
+                display: block;
+                .link-blog {
+                    font-size: 1.24rem;
+                    font-weight: 700;
+                    margin: 0.42rem 0px;
+                }
+                .link-desc {
+                    font-size: 0.8rem;
+                    font-weight: normal;
+                    margin-top: 0.5rem;
+                    width: 10.5rem;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+.custom-container.tip {
+    --tip-border-color:#009400;
+    --tip-bg-color:#e6f6e6;
+    --tip-title-color: #003100;
+    border-color: var(--tip-border-color);
+    background: var(--tip-bg-color);
+    margin: 1rem 0;
+    padding: 0.25rem 1rem;
+    border-left-width: 0.3rem;
+    border-left-style: solid;
+    border-radius: 0.5rem;
+    color: inherit;
+    .custom-container-title {
+        color: var(--tip-title-color);
+        position: relative;
+        font-weight: 600;
+    }
+    p{
+        line-height: 1.5;
+        display: block;
+        
+        font-size: 16px;
+    }
+}
