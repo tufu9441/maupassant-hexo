@@ -11,11 +11,27 @@ block content
     .post
       h1.post-title
         if post.sticky
-          span(class="top-post")= __('Sticky') 
+          span(class="top-post")= __('Sticky')
         include _partial/helpers.pug
         a(href=url_for(post.path))
           +title(post)
       .post-meta= post.date.format(config.date_format)
+        - if(post.categories && post.categories.length) {
+
+        - for (var i=0; i < post.categories.length; i++) {
+        span= ' | '
+        span <i class="fa fa-folder"></i>
+
+          a(href=url_for(post.categories.data[ i ].path))=  ' ' + post.categories.data[ i ].name
+        - }
+        - }
+
+        - for (tag in post.tags.data){
+        - var tagName = post.tags.data[tag].name
+        span= ' | '
+        span <i class="fa fa-tag"></i>
+        a(href=url_for('/tags/' + tagName + '/'))= ' ' + tagName
+        - }
       if theme.disqus.enable == true
         a.disqus-comment-count(data-disqus-identifier=post.path, href=url_for(post.path) + '#disqus_thread')
       if theme.changyan
