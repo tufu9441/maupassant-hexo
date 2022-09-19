@@ -176,6 +176,18 @@ div {
         .category-list-count::after {
             content: ")";
         }
+        /* Tiered display categories */
+        .category-list-child li {
+            margin-left: 0.6em !important;
+            padding-left: 1em;
+            position: relative;
+        }
+        .category-list-child li::before {
+            content: "-";
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
         .search-form {
             position: relative;
             overflow: hidden;
@@ -234,18 +246,18 @@ div {
         a {
             color: #555;
         }
-        .top-post {  
-            font-weight: 400;  
-            height: 32px;  
-            padding: 0 6px;  
-            margin-right: 5px;  
-            line-height: 32px;  
-            font-size: 16px;  
-            white-space: nowrap;  
-            vertical-align: 2px;  
-            color: #fff;  
-            background-image: -webkit-linear-gradient(0deg, #3742fa 0, #a86af9  100%);  
-            border-radius: 2px 6px;  
+        .top-post {
+            font-weight: 400;
+            height: 32px;
+            padding: 0 6px;
+            margin-right: 5px;
+            line-height: 32px;
+            font-size: 16px;
+            white-space: nowrap;
+            vertical-align: 2px;
+            color: #fff;
+            background-image: -webkit-linear-gradient(0deg, #3742fa 0, #a86af9  100%);
+            border-radius: 2px 6px;
         }
     }
     .post-meta {
