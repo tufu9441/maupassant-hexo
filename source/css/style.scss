@@ -305,6 +305,14 @@ div {
             padding-right: 0.3em;
         }
 
+        .updated {
+            &:before {
+                font-family: "FontAwesome";
+                content: "\f021";
+                padding-right: 0.3em;
+            }
+        }
+
         .category {
             &:before {
                 font-family: "FontAwesome";
