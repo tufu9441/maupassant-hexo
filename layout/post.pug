@@ -7,6 +7,9 @@ block content
   .post
     h1.post-title= page.title
     .post-meta= page.date.format(config.date_format)
+      if page.updated
+        span= ' | '
+        span.updated= page.updated.format(config.date_format)
       if page.categories.length > 0
         span= ' | '
         span.category
