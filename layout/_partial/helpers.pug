@@ -1,4 +1,4 @@
-mixin a_with_current(href, content, id)
+mixin a_with_current(href, content, id, target)
   - var url = url_for(href)
   if (href == '.' && (is_home() || is_post())) || is_current(href)
     a.current(href=url)
@@ -10,7 +10,7 @@ mixin a_with_current(href, content, id)
     a.current(href=url)
       i(class='fa' + ' ' + id)= ' ' + content
   else
-    a(href=url)
+    a(href=url,target=target)
       i(class='fa' + ' ' + id)= ' ' + content
 
 mixin title(page)
