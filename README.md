@@ -121,6 +121,11 @@ love: false ## If you want the peach heart to appear when you click anywhere, se
 plantuml: ## Using PlantUML to generate UML diagram, must install hexo-filter-plantuml (https://github.com/miao1007/hexo-filter-plantuml).
   render: "PlantUMLServer" ##  Local or PlantUMLServer.
   outputFormat: "svg" ## common options: svg/png
+mermaid: ## Using mermaid to generate diagram or flowchart, must install hexo-filter-mermaid-diagrams (https://github.com/webappdevelp/hexo-filter-mermaid-diagrams)
+  enable: true  # default true
+  version: "7.1.2" # default v7.1.2
+  options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
+    startOnload: true  # default true
 copycode: true ## If you want to enable one-click copy of the code blocks, set the value to true.
 dark: false ## If you want to toggle between light/dark themes, set the value to true.
 totop: true ## If you want to use the rocketship button to return to the top, set the value to true.
@@ -228,6 +233,7 @@ version: 1.0.0
 - post_copyright - Enable copyright info after each post
 - love - Enable peach heart when clicking anywhere
 - plantuml - Enable PlantUML to generate UML diagram
+- mermaid - Enable mermaid to generate diagram or flowchart
 - copycode - Enable one-click copy of code blocks
 - dark - Enable to toggle between light/dark modes of the theme
 - totop - Enable the rocketship to-top button

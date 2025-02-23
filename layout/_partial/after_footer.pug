@@ -39,6 +39,14 @@ if theme.copycode == true
 if theme.external_css == true
   link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/external.css' + '?v=' + theme.version)
 
+if theme.mermaid.enable == true
+  script(type='text/javascript', id='maid-script' mermaidoptioins=theme.mermaid.options src='https://unpkg.com/mermaid@'+ theme.mermaid.version + '/dist/mermaid.min.js' + '?v=' + theme.version)
+  script.
+    if (window.mermaid) {
+      var options = JSON.parse(document.getElementById('maid-script').getAttribute('mermaidoptioins'));
+      mermaid.initialize(options);
+    }
+
 if page.mathjax
   include mathjax.pug
 
